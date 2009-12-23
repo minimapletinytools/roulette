@@ -1,0 +1,76 @@
+
+
+
+[intro 01]
+*fades in, russian is visibly angry*
+*drinks vodka*
+"Enough of this idle dispute! We will settle this now."
+*pulls out gun*
+"One Bullet!"
+*spins barrel and slams gun on table*
+[wait flags = first]
+
+[wait 01]
+*waits*
+[wait 02]
+*waits*
+[wait 03]
+*waits*
+[wait 04  (once)]
+"I am not afraid" or osmething like that...
+[wait]
+if first [bravery]
+if time > PATIENCE [jeer]
+if time > VITAL_PATIENCE [threat]
+
+[bravery 01]
+"Fine, we must all die one day"
+[pickup]
+
+[pickup 01]
+*picks up gun*
+[shoot]
+
+[shoot 01]
+*frowns and shoots*
+[shoot 02 (once)]
+"sweet mother"
+[shoot 03]
+etc...
+[return]
+
+[return 01]
+*returns gun*
+[wait]
+
+[jeer 01]
+"Coward!"
+[jeer 02]
+"Take the gun!"
+[jeer 03]
+"do it!"
+[jeer 04]
+"you coward!"
+[jeer 05]
+"shoot yourself!"
+[jeer 06]
+etc
+[wait]
+
+[threat 01]
+"If you do not do it I will shoot you myself"
+[lean]
+
+[lean 01]
+*leans against table*
+[leantowait]
+[shootyou]
+
+[leantowait 01]
+*resolves back into seat*
+[pickup]
+[wait]
+
+[shootyou 01]
+*shoots you*
+
