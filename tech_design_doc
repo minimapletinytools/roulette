@@ -1,0 +1,74 @@
+Make VIEWER engine:
+
+overall structure
+
+draft1:
+main -> conroller
+
+here's a fun idea, lets outsource this entirely to xml
+
+controller reads in xml to determine transition possibilities
+controller reads xml to determine state variables
+during play, controller plays active clip
+during update, controller checks state variables against transition possibilities to determine if transition should take place.
+
+
+components:
+
+sound:
+due to poor understanding of sound libraries, this implementation is a little cumbersome. Create option to allow everything to be preloaded for display mode where initial loading time is not an issue.
+class Sound
+methods:
+def __init__()
+    pygame.mixer.preinit(...)
+    pygame.init()
+#basic flywheel design
+def loadSound(fn)
+def playSound
+
+subtitle:
+subtitle.py
+loads default font, size, color, style and center location
+methods:
+def subtitle(text, duration, start)
+    writes text centered at default center location, with default color, style, size, font etc.
+    does so in start ms for duration ms
+future improvements:
+create push popping sort of thing for font color font size style
+
+imager:
+imager needs to know SCREEN RATIO before hand
+use some function like this and pass in img.w,img.h,window.w,window.h to get final draw dimensions
+def largestrect(r1w,r1h,r2w,r2h):
+    """returns w,h such that r1 fits in r2 without change in ratio"""
+    if(r1w/r1h < r2w/r2h):
+        return r2w, r2w*r1h/r1w
+    else:
+        return r2h*r1w/r1h, r2h
+methods:
+(assuming we choose to have a global window)
+def draw(filename):
+    img = load(filename)
+    img.blit(img.width,img.height,window.width,window.height
+bonus:
+allow in config, to specify a static border around the image so we dont always bleed on or both edges of the screen
+
+clip:
+clip represents an audio clip and a sequence of images in sync with the audio clip along with transitional information. All this information is stored in an xml file that must be used to instatiate a clip object.
+methods:
+def clip(self,xml):
+    xml = dom.minidom.parse(xml)
+    self.process(xml)
+def process(self,xml):
+    self.audio = loadsound(xml.attributes['audio'])
+    do something to set up frames and synchro information
+def play(self):
+    self.started = true
+    self.audio.play()
+def update(self):
+    #this sort of stuff should live in clip manager sort of thing
+    checks global state variable to see if we need to transition
+    check if we are at end of audio clip and decide what to do next (loop, wait, default transition, etc)
+def draw(self):
+    time = self.audio.time
+    draw image assosciated with time
