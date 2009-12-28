@@ -11,7 +11,13 @@ controller reads in xml to determine transition possibilities
 controller reads xml to determine state variables
 during play, controller plays active clip
 during update, controller checks state variables against transition possibilities to determine if transition should take place.
+play should be able to fade in and out, or maybe add this into video hardcoded.
 
+controller plugins??
+active displays:
+opening, continue, win, lose  
+parralel disprays:
+player hand controlled by input and state.
 
 components:
 

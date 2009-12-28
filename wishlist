@@ -1,0 +1,13 @@
+
+
+Posterizeme:
+add dithering support with a pattern/probability/cutoff function
+def pattern(pos, probability, cutoff):
+    if .5 - probability < cutoff:
+        do pattern
+    else: 
+        return false
+
+patterns are color oriented, that is probability is always less than 50... maybe...
+
+

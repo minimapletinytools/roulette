@@ -1,6 +1,30 @@
 Make VIEWER engine:
 
+overall structure
+
+draft1:
+main -> conroller
+
+here's a fun idea, lets outsource this entirely to xml
+
+controller reads in xml to determine transition possibilities
+controller reads xml to determine state variables
+during play, controller plays active clip
+during update, controller checks state variables against transition possibilities to determine if transition should take place.
+
+
 components:
+
+sound:
+due to poor understanding of sound libraries, this implementation is a little cumbersome. Create option to allow everything to be preloaded for display mode where initial loading time is not an issue.
+class Sound
+methods:
+def __init__()
+    pygame.mixer.preinit(...)
+    pygame.init()
+#basic flywheel design
+def loadSound(fn)
+def playSound
 
 subtitle:
 subtitle.py
