@@ -1,0 +1,12 @@
+"""
+global.py contains constants and any other global variables if needed
+"""
+
+motd = "Roulette v.01\na game by Peter Lu/nRoulette is built on python v2.6"
+import sys
+print "You are running python version,",sys.version
+print motd
+
+import pyglet
+pyglet.resource.path.append("data")
+pyglet.resource.reindex()

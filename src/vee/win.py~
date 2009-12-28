@@ -1,0 +1,37 @@
+import glob
+import sys
+import pyglet
+from pyglet import window
+		
+class win( window.Window ): 
+	def __init__(self,*args, **kwargs):
+		window.Window.__init__(self, *args, **kwargs)
+		keys = window.key.KeyStateHandler()
+		self.push_handlers(keys)
+		pyglet.clock.schedule(self.update)
+		
+		#instantiate a controller
+	def update(self,dt):
+		"""
+		update function
+		"""
+		pass
+	def on_draw(self):
+		print "drawing", self
+	def on_key_press(self,symbol,modifiers):
+		print "on key press:",symbol,modifiers
+        if symbol == window.key.ESCAPE:
+            exit()
+		if symbol == window.key.SPACE:
+			print "space pressd"
+			self.press()
+	def press(self):
+		pass
+		
+if __name__ == "__main__":
+    run()
+
+def run():
+	print "now running test application"
+	window = win()
+	pyglet.app.run()

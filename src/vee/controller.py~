@@ -1,22 +1,23 @@
 import Vclip
 from xml.dom import minidom
 
-class Controller:
-	def __init__(self,xml = None):
-		activeClip = None
+class Vcontroller:
+	def __init__(self,xml):
+		self.man = VclipManager(xml)
 	def update():
+		#todo update self.man, decide how to pass it state information
 		pass
 	def draw():
-		img = activeClip.grabFrame()
-		#TODO draw img
+		self.man.draw()
 		
-class ClipManager():
+class VclipManager():
 	class GraphNode:
 		def __init__(self,xml):
+			#TODO if xml is not element node, (i.e. it is document from just loaded xml file) then try and find an appropriate element node
 			self.xml = xml
 			#considering parsing xml data to native datatypes for slightly improved performance
 			pass 
-		def getProperty(prop):
+		def getAttribute(prop):
 			try: return self.xml.getAttribute(prop)
 			except: return ""
 		def getNext(state):
@@ -26,13 +27,14 @@ class ClipManager():
 			#TODO decide how you want ot handle state information
 			pass
 	def __init__(self):
+		self.active = 1
 		pass
-	def load(filename):
+	def load(xml):
 		"""
 		filename is location of graph xml data file.
 		graph xml data file will contain information concerning clips
 		"""
-		self.graphxml = minidom.parse(filename).getChild()
+		self.graphxml = xml
 		self.clipxml = minidom.parse(self.graphxml.getAttribute("clipxml")
 		#setup transition graph
 		self.graphmap = dict()
@@ -45,6 +47,8 @@ class ClipManager():
 				type = i.getAttribute("type")
 				clip = getAttr(Vclip,type)(i)
 				self.clipmap[i.getAttribute("name")] = clip
+	def draw():
+		self.clipmap[self.graphmap[i].getAttribute("name")].draw()
 				
 class Overlayer:
 	def __init__(self):

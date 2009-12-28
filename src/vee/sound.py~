@@ -1,6 +1,7 @@
 #consider building singleton interface wrapper
 #also consider providing access to pyglet sound library as well
 import pygame
+from pyglet.resource import *
 class Vsound:
     def __init__(self):
         pygame.mixer.pre_init(44100, -16, 2, 2048)
@@ -11,7 +12,7 @@ class Vsound:
     def loadMusic(self,filename):
         if self.activemusic != filename:
             self.activemusic = filename
-            pygame.mixer.music.load(filename)
+            pygame.mixer.music.load(file(filename))
     def playMusic(self,filename):
         if self.activemusic != filename:
             self.loadMusic(filename)
@@ -23,7 +24,7 @@ class Vsound:
         
         filename: string"""
         if filename not in self.soundList:
-            self.soundList[filename] = pygame.mixer.Sound(filename)
+            self.soundList[filename] = pygame.mixer.Sound(file(filename))
             print "loaded sound", filename, self.soundList[filename]
         
     def play(self, filename):

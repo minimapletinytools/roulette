@@ -19,6 +19,47 @@ opening, continue, win, lose
 parralel disprays:
 player hand controlled by input and state.
 
+draft2:
+for refractoring code in its current state
+
+base:
+Vwin extends pyglet.window.win, does very little itself, offloads all nonsense to controller class to maintain modularity for controller class
+
+Vcontroller instantiates VclipManager and any plugins, also determines how to handle its gamestate, perhaps create a state transition class.
+
+VclipManager controls clips and transitions
+
+Vclip contains image and audio information for a single clip. controls its own drawing
+
+plugins:
+Vsub: subtitles, see below
+
+modules:
+Vsound: flywheel construct for handling sounds???? maybe I dunno
+Vimager: controls all drawing, centering, scaling, to fit varying screen sizes.
+
+Vlogic: do we need one of tehse? big question, how to handle logic, state can be changed by TIME and USER input. State effects output
+
+xml format:
+clips are formatted as such:
+<clip name = "" type = "">
+	<frame number = "" filename = "" time = "" />
+</clip>
+where name is a unique identifier, type represents string representation of python clip subclass name
+clip may have redundant/worthless information for example videoname="station.mov" durinms="60" prefix="/test/station" width="320" height="240"
+typically such a file would be called clips.xml
+graphs are formatted as such:
+<stage name="default">
+	<node id = "1" clip = "station" >
+		<next state = "DEFAULT" id = "1" />
+	</node>
+</stage>
+typically we assume stage to be default though I suppose it does not kill to have multiple stages in one file... might be better served inside of a single stage unless there is a real good reason for such a top level distinction
+still need to decide how to format next state in a nice general way
+if no default transition is specified, clips are assumed to loop onto themselves
+perhaps allow for additional parameter such as loop = "halt/loop" where loop is equivalent to above, and halt halts on the last frame
+
+
 components:
 
 sound:
@@ -39,6 +80,7 @@ methods:
 def subtitle(text, duration, start)
     writes text centered at default center location, with default color, style, size, font etc.
     does so in start ms for duration ms
+you will need to make a subtitle module that goes inside of the controller
 future improvements:
 create push popping sort of thing for font color font size style
 
