@@ -2,7 +2,7 @@
 #also consider providing access to pyglet sound library as well
 import pygame
 from pyglet.resource import *
-class Vsound:
+class Sound:
     def __init__(self):
         pygame.mixer.pre_init(44100, -16, 2, 2048)
         pygame.init()
@@ -19,6 +19,10 @@ class Vsound:
         self.mixer.music.play()
     def stopMusic(self):
         self.mixer.music.stop()
+    def getSound(self,filename):
+        if filename not in self.soundList:
+            self.loadSound(filename)
+        return self.soundList[filename]
     def loadSound(self,filename):
         """loads sound filename and puts it on the flywheel
         

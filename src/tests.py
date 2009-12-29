@@ -1,3 +1,17 @@
+#===============================================================================
+# #globals locals test
+# x = 1
+# def l():
+#    print "you are in l"
+# def f():
+#    l()
+#    print "locals", locals()
+#    global x
+#    x = 2
+#    print "locals", locals()
+#    #print "globals", globals()
+#===============================================================================
+
 #~ class lol:
     #~ def f(self):
         #~ print "called f"

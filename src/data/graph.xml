@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stage name="default" clipxml = "clips.xml">
+	<clipnode id = "1" clip = "station" >
+		<next state = "DEFAULT" id = "1" />
+	</clipnode>
+</stage>
