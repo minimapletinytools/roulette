@@ -8,7 +8,7 @@ import pyglet
 class roulette(win.Win):
     def __init__(self,*args, **kwargs):
         win.Win.__init__(self,*args, **kwargs)
-        self.cont = controller.Controller(minidom.parse(resource.file("graph.xml")).firstChild)
+        self.cont = controller.Controller(minidom.parse(resource.file("graph.xml")).documentElement)
         #setup the drawer module with current window vars. Since we have to do this, it might be better if we make drawer a singleton
         drawer.setVars(self)
     def update(self,dt):
@@ -20,8 +20,8 @@ class roulette(win.Win):
     
     
 def run():
-    w = roulette(fullscreen = True)
-    #w = roulette()
+    #w = roulette(fullscreen = True)
+    w = roulette()
     pyglet.app.run()
 if __name__ == "__main__":
     run()

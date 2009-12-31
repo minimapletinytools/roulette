@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<stage name="default" clipxml = "clips.xml">
-	<clipnode id = "1" clip = "station" >
-		<next state = "DEFAULT" id = "1" />
-	</clipnode>
-</stage>
+<xml>
+	<vars>
+		var1 var2 var3
+	</vars>
+	<stage name="default" clipxml = "clips.xml">
+		<clipnode id = "1" clip = "station">
+			<next id = "1" interval="">
+				and or var1 var2 var3
+			</next>
+			<next id = "2" interval="">
+				true
+			</next>
+		</clipnode>
+		<clipnode id = "2" clip = "station">
+			<next id = "1" interval="">
+				and or var1 var2 var3
+			</next>
+			<next id = "1" interval="">
+				true
+			</next>
+		</clipnode>
+	</stage>
+</xml>

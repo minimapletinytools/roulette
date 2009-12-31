@@ -62,12 +62,43 @@ def openAnything(source):
 
 #XML
 import xml
+def loadAttributes(xml,d):
+    """
+    dumps all attributes by name into dictionary
+    """
+    pass
+def getTextNode(node,i=0):
+    return getNode(node,xml.dom.Node.TEXT_NODE,i)
+def getNode(node, type, i=0):
+    """
+    returns ith text node of node
+    """
+    if i == 0:
+        for w in node.childNodes: 
+            if w.nodeType == type:
+                return w
+    return getNodes(node,type)[i]
+def getNodes(node, type):
+    """
+    returns ith text node of node
+    """
+    return [w for w in node.childNodes if w.nodeType == type]
 def getChildWithAttribute(node,tag,attribute,value):
+    """
+    returns children of type ELEMENT_NODE that have specified tag and attribute of specified value
+    """
     for e in node.childNodes:
         if e.nodeType == xml.dom.Node.ELEMENT_NODE and e.tagName == tag:
             if e.hasAttribute(attribute) and e.getAttribute(attribute) == value:
                 return e
     return None
+def getChild(node,tag,i = 0):
+    #i = 0 case we do separately for efficiency
+    if i == 0:
+        for w in node.childNodes: 
+            if w.nodeType == xml.dom.Node.ELEMENT_NODE and w.tagName == tag:
+                return w
+    return getChildren(node,tag)[i]
 def getChildren(node,tag):
     """
     returns all immediete children with a certain tagname
@@ -76,5 +107,4 @@ def getChildren(node,tag):
     
     returns list of xml
     """
-    import xml
     return [w for w in node.childNodes if w.nodeType == xml.dom.Node.ELEMENT_NODE and w.tagName == tag]

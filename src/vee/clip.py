@@ -8,6 +8,8 @@ class Clip():
 		#todo add some type of transition priority map container in here
 	def play(self):
 		pass 
+	def stop(self):
+		pass
 	def preload(self):
 		pass
 	def grabFrame(self):
@@ -17,6 +19,7 @@ class Clip():
 		pass
 	def grabFrameTime(self):
 		pass
+	
 class DummyClip(Clip):
 	"""
 	dummy clip, does nothing, used as blank trnansitional nodes in graph
@@ -32,21 +35,24 @@ from pyglet import resource
 import pyglet
 import time
 import utils
+import glob
 class ImageClip(Clip):
 	def __init__(self,xml):
 		Clip.__init__(self,xml)
 		
-		#do we presume by default that we want to load sound automatically or do we wnat to make another preload function for loading sound???
-		self.sound = resource.media(xml.getAttribute("sound"),True)    #do we want to stream or not??? 
+		#do we presume by default that we want to load sound automatically or do we wnat to make another preload function for loading sound???()
+		self.sound = glob.sound.loadSound(xml.getAttribute("sound"))
 		self.start = 0
 	def play(self):
 		self.start = time.time()
-		self.sound.play() #make sure there is no delay between this and when the sound plays
+		glob.sound.play(self.sound)
+	def stop(self):
+		glob.sound.stopAll()
 	def getTime(self):
 		if self.start:
 			return time.time()-self.start
 		else: return 0
-	def preload(self):
+	def preload(self,video = True,sound = False):
 		#consider some sort of locals storage of image data in frame number to image map
 		#either use good ole image wheel or allow for local creation of some sort of image wheel to maintain modularity
 		#or to be lazy don't do anything
@@ -58,6 +64,13 @@ class ImageClip(Clip):
 		if framexml:
 			return resource.image(framexml.getAttribute("filename"))
 		else: return None
+	def isFinished(self):
+		if self.start:
+			if self.xml.hasAttribute("duration"):
+				if self.getTime() > float(self.xml.getAttribute("duration")):
+					return True
+		else: return self.sound.duration
+		return False
 	def grabFrameNumber(self):
 		return str((int)(self.getTime()/((int)(self.xml.getAttribute("durinms"))/1000.0)))
 	def grabFrameTime(self):

@@ -30,7 +30,7 @@ class Sound:
         if filename not in self.soundList:
             self.soundList[filename] = pygame.mixer.Sound(file(filename))
             print "loaded sound", filename, self.soundList[filename]
-        
+        return filename
     def play(self, filename):
         if filename not in self.soundList:
             self.loadSound(filename)
