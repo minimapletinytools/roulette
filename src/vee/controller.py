@@ -43,7 +43,7 @@ class ClipManager():
 			#TODO add interval check into this
 			finished = self.clip.isFinished()
 			for e,f,g in self.statelist:
-				if not f and finished or False:   #put intervals check here
+				if (not f and finished) or False:   #put intervals check here
 					print "evaluating",g.split()
 					if logic.evaluate(g,state):
 						print "pass"
@@ -84,7 +84,6 @@ class ClipManager():
 			self.getActiveClip().play()
 	def draw(self):
 		drawer.draw(self.getActiveClip().grabFrame(),50,50)
-		pass
 	def getActiveClip(self):
 		return self.clipmap[self.graphmap[(self.active)].getAttribute("clip")]
 				

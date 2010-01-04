@@ -1,4 +1,11 @@
 TODO 
 
+determine graphing possibilities, be practical!
+
+determine state changes based on input and time. Create some system to make handling time based state changes easy. think about it. deadline jan 1 end of today!
+
+do fako version and put up on SB. Do it jan 2!
+
+clean up code a little bit, consider how you would do future versions. plan for it. 
 
 DONE refractor code, separate into vee module

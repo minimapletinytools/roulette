@@ -8,11 +8,19 @@
 			<next id = "1" interval="">
 				and or var1 var2 var3
 			</next>
-			<next id = "2" interval="">
+			<next id = "3" interval="">
 				true
 			</next>
 		</clipnode>
-		<clipnode id = "2" clip = "station">
+		<clipnode id = "2" clip = "station2">
+			<next id = "1" interval="">
+				and or var1 var2 var3
+			</next>
+			<next id = "1" interval="">
+				true
+			</next>
+		</clipnode>
+		<clipnode id = "3" clip = "sister">
 			<next id = "1" interval="">
 				and or var1 var2 var3
 			</next>

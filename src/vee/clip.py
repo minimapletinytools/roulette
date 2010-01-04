@@ -10,7 +10,7 @@ class Clip():
 		pass 
 	def stop(self):
 		pass
-	def preload(self):
+	def preload(self,video = True,sound = True):
 		pass
 	def grabFrame(self):
 		pass
@@ -36,11 +36,13 @@ import pyglet
 import time
 import utils
 import glob
+import stupid
 class ImageClip(Clip):
 	def __init__(self,xml):
 		Clip.__init__(self,xml)
 		
 		#do we presume by default that we want to load sound automatically or do we wnat to make another preload function for loading sound???()
+		#TODO make blank sound thingy
 		self.sound = glob.sound.loadSound(xml.getAttribute("sound"))
 		self.start = 0
 	def play(self):
@@ -52,24 +54,29 @@ class ImageClip(Clip):
 		if self.start:
 			return time.time()-self.start
 		else: return 0
-	def preload(self,video = True,sound = False):
+	def preload(self,video = True,sound = True):
 		#consider some sort of locals storage of image data in frame number to image map
 		#either use good ole image wheel or allow for local creation of some sort of image wheel to maintain modularity
 		#or to be lazy don't do anything
 		pass
 	def grabFrame(self):
+		n = self.grabFrameNumber()
+		if int(n) <= int(self.xml.getAttribute("frames")):
+			#print stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".jpg")
+			return resource.image(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".jpg"))
+		return None
+	def grabFrameOLD(self):
 		#TODO you should really make at least a local dict of image names to map becaus ethis loads the same image multiple times...
 		#print self.xml,"frame","number",self.grabFrameNumber()
 		framexml = utils.getChildWithAttribute(self.xml,"frame","number",self.grabFrameNumber())
 		if framexml:
-			return resource.image(framexml.getAttribute("filename"))
+			return resource.image(stupid.splitjoin(framexml.getAttribute("folder")+framexml.getAttribute("filename")))
 		else: return None
 	def isFinished(self):
 		if self.start:
 			if self.xml.hasAttribute("duration"):
-				if self.getTime() > float(self.xml.getAttribute("duration")):
-					return True
-		else: return self.sound.duration
+				return self.getTime() > float(self.xml.getAttribute("duration"))
+			else: return self.getTime() > self.sound.duration 
 		return False
 	def grabFrameNumber(self):
 		return str((int)(self.getTime()/((int)(self.xml.getAttribute("durinms"))/1000.0)))
