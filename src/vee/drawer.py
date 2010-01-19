@@ -2,10 +2,9 @@
 #determine variables
 
 from pyglet.gl import *
-glClearColor(0,0,0,0)
-glEnable(GL_BLEND)
-glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
-glClearColor(0,0,0,0)
+#glClearColor(0,0,0,0)
+#glEnable(GL_BLEND)
+#glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 
 width,height = None,None
 init = False
@@ -31,6 +30,8 @@ def largestrect(r1w,r1h,r2w,r2h):
     
 def draw(img,ox = 0, oy = 0):
     global width,height,init
+    glEnable(GL_BLEND)
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     if init and img:
         w,h = largestrect(img.width,img.height,width-ox,height-oy)
         #drawing from lower left corner

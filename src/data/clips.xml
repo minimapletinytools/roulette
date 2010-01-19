@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <clips>
-<clip name="station" type = "ImageClip" sound = "station.wav" videoname="station.mov" durinms="60" frames = "71" duration = "4.26" folder="station/" prefix="station" width="320" height="240" />
-<clip name="station2" type = "ImageClip" sound = "station.wav" videoname="station.mov" durinms="60" frames = "71" folder="station/" prefix="station" width="320" height="240" />
-<clip name="sister" type = "ImageClip" sound = "station.wav" videoname="movie.avi" durinms="120" frames = "70" duration = "8.40" folder="sister/"  prefix="sister" width="320" height="240" />
+	<clip duration="2.55319727891" durinms="10000" folder="words/" frames="1" name="start" prefix="blamocreepyblue" sound="start.wav" type="ImageClip"/>
+	<clip duration="4.57433106576" durinms="10000" folder="words/" frames="1" name="intro" prefix="intro" sound="intro.wav" type="ImageClip"/>
+	<clip duration="4.55111111111" durinms="10000" folder="words/" frames="1" name="FH1_1" prefix="FH1_1" sound="FH1_1.wav" type="ImageClip"/>
+	<clip duration="3.27401360544" durinms="10000" folder="words/" frames="1" name="FH1_2" prefix="FH1_2" sound="FH1_2.wav" type="ImageClip"/>
+	<clip duration="2.22911564626" durinms="10000" folder="words/" frames="1" name="FH1_3" prefix="FH1_3" sound="FH1_3.wav" type="ImageClip"/>
+	<clip duration="3.88934240363" durinms="10000" folder="words/" frames="1" name="wait" prefix="wait" sound="wait.wav" type="ImageClip"/>
+	<clip duration="2.3916553288" durinms="10000" folder="words/" frames="1" name="FH2_1" prefix="FH2_1" sound="FH2_1.wav" type="ImageClip"/>
+	<clip duration="3.95900226757" durinms="10000" folder="words/" frames="1" name="FSFH2_2" prefix="FSFH2_2" sound="FSFH2_2.wav" type="ImageClip"/>
+	<clip duration="2.54258503401" durinms="10000" folder="words/" frames="1" name="FSFH2_3" prefix="FSFH2_3" sound="FSFH2_3.wav" type="ImageClip"/>
+	<clip duration="3.66875283447" durinms="10000" folder="words/" frames="1" name="FH3_1" prefix="FH3_1" sound="FH3_1.wav" type="ImageClip"/>
+	<clip duration="5.90947845805" durinms="10000" folder="words/" frames="1" name="FH3_2" prefix="FH3_2" sound="FH3_2.wav" type="ImageClip"/>
+	<clip duration="3.41333333333" durinms="10000" folder="words/" frames="1" name="FH3_3" prefix="FH3_3" sound="FH3_3.wav" type="ImageClip"/>
+	<clip duration="5.75854875283" durinms="10000" folder="words/" frames="1" name="Bgoesfirst" prefix="Bgoesfirst" sound="Bgoesfirst.wav" type="ImageClip"/>
+	<clip duration="4.64399092971" durinms="10000" folder="words/" frames="1" name="waitlean" prefix="waitlean" sound="waitlean.wav" type="ImageClip"/>
+	<clip duration="2.20589569161" durinms="10000" folder="words/" frames="1" name="FH4" prefix="FH4" sound="FH4.wav" type="ImageClip"/>
+	<clip duration="3.73841269841" durinms="10000" folder="words/" frames="1" name="BshootsY" prefix="BshootsY" sound="BshootsY.wav" type="ImageClip"/>
+	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="fuckyou" prefix="fuckyou" sound="fuckyou.wav" type="ImageClip"/>
+	<clip duration="4.13315192744" durinms="10000" folder="words/" frames="1" name="BprepareshootB" prefix="BprepareshootB" sound="BprepareshootB.wav" type="ImageClip"/>
+	<clip duration="2.97215419501" durinms="10000" folder="words/" frames="1" name="DH_1" prefix="DH_1" sound="DH_1.wav" type="ImageClip"/>
+	<clip duration="1.63700680272" durinms="10000" folder="words/" frames="1" name="DH_2" prefix="DH_2" sound="DH_2.wav" type="ImageClip"/>
+	<clip duration="2.73995464853" durinms="10000" folder="words/" frames="1" name="DH_3" prefix="DH_3" sound="DH_3.wav" type="ImageClip"/>
+	<clip duration="4.13315192744" durinms="10000" folder="words/" frames="1" name="BshootsB" prefix="BshootsB" sound="BshootsB.wav" type="ImageClip"/>
+	<clip duration="8.24308390023" durinms="10000" folder="words/" frames="1" name="Bdies" prefix="Bdies" sound="Bdies.wav" type="ImageClip"/>
+	<clip duration="1.95047619048" durinms="10000" folder="words/" frames="1" name="youwin" prefix="youwin" sound="youwin.wav" type="ImageClip"/>
+	<clip duration="2.35682539683" durinms="10000" folder="words/" frames="1" name="YT_1" prefix="YT_1" sound="YT_1.wav" type="ImageClip"/>
+	<clip duration="1.9620861678" durinms="10000" folder="words/" frames="1" name="YT_2" prefix="YT_2" sound="YT_2.wav" type="ImageClip"/>
+	<clip duration="2.14784580499" durinms="10000" folder="words/" frames="1" name="YT_3" prefix="YT_3" sound="YT_3.wav" type="ImageClip"/>
+	<clip duration="14.7911111111" durinms="10000" folder="words/" frames="1" name="continue" prefix="continue" sound="continue.wav" type="ImageClip"/>
+	<clip duration="2.14784580499" durinms="10000" folder="words/" frames="1" name="youlose" prefix="youlose" sound="youlose.wav" type="ImageClip"/>
+	<clip duration="1.72988662132" durinms="10000" folder="words/" frames="1" name="SH1_1" prefix="SH1_1" sound="SH1_1.wav" type="ImageClip"/>
+	<clip duration="2.50775510204" durinms="10000" folder="words/" frames="1" name="SH1_2" prefix="SH1_2" sound="SH1_2.wav" type="ImageClip"/>
+	<clip duration="3.66875283447" durinms="10000" folder="words/" frames="1" name="SH1_3" prefix="SH1_3" sound="SH1_3.wav" type="ImageClip"/>
+	<clip duration="2.15945578231" durinms="10000" folder="words/" frames="1" name="SH2" prefix="SH2" sound="SH2.wav" type="ImageClip"/>
+	
+	<!--player clips -->
+	<clip name = "eyes_closing" folder = "player/" prefix = "close_eyes" sound = "" duration = ".5" durinms = "62" frames = "9" freeze = "yes" type = "ImageClip"/> 
 </clips>
+

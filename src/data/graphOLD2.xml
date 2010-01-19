@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<vars>
+		var1 var2 var3
+	</vars>
+	<stage name="default" clipxml = "clips.xml">
+		<clipnode id = "1" name = "start" clip = "station" />
+		<clipnode id = "2" name = "wait" clip = "station2" />
+		<clipnode id = "3" name = "shoot" clip = "sister" />
+	</stage>
+</xml>

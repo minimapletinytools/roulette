@@ -20,6 +20,8 @@ class Sound:
     def stopMusic(self):
         self.mixer.music.stop()
     def getSound(self,filename):
+        if not filename:
+            return None
         if filename not in self.soundList:
             self.loadSound(filename)
         return self.soundList[filename]
@@ -27,11 +29,15 @@ class Sound:
         """loads sound filename and puts it on the flywheel
         
         filename: string"""
+        if not filename:
+            return filename
         if filename not in self.soundList:
             self.soundList[filename] = pygame.mixer.Sound(file(filename))
             print "loaded sound", filename, self.soundList[filename]
         return filename
     def play(self, filename):
+        if not filename:
+            return
         if filename not in self.soundList:
             self.loadSound(filename)
         #print "playing sound",filename

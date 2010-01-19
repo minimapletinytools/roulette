@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
 	<vars>
-		var1 var2 var3
+		press 
+		time_pressed
+		time_enter_frame
+		first_shot
+		first_hesitate
+		visited
+		bullet
+		
+		FH_state
 	</vars>
-	<stage name="default" clipxml = "clips.xml">
-		<clipnode id = "1" clip = "station">
-			<next id = "1" interval="">
-				and or var1 var2 var3
-			</next>
-			<next id = "3" interval="">
-				true
-			</next>
-		</clipnode>
-		<clipnode id = "2" clip = "station2">
-			<next id = "1" interval="">
-				and or var1 var2 var3
-			</next>
-			<next id = "1" interval="">
-				true
-			</next>
-		</clipnode>
-		<clipnode id = "3" clip = "sister">
-			<next id = "1" interval="">
-				and or var1 var2 var3
-			</next>
-			<next id = "1" interval="">
-				true
-			</next>
-		</clipnode>
+	<stage name="brandon" clipxml = "clips.xml">
+		<clipnode clip="start" id="1" name="start"/>
+		<clipnode clip="intro" id="2" name="intro"/>
+		<clipnode clip="wait" id="3" name="wait"/>
+		<clipnode clip="FH1_1" id="4" name="FH1_1"/>
+		<clipnode clip="FH1_2" id="5" name="FH1_2"/>
+		<clipnode clip="FH1_3" id="6" name="FH1_3"/>
+		<clipnode clip="FH2_1" id="7" name="FH2_1"/>
+		<clipnode clip="FSFH2_2" id="8" name="FSFH2_2"/>
+		<clipnode clip="FSFH2_3" id="9" name="FSFH2_3"/>
+		<clipnode clip="FH3_1" id="10" name="FH3_1"/>
+		<clipnode clip="FH3_2" id="11" name="FH3_2"/>
+		<clipnode clip="FH3_3" id="12" name="FH3_3"/>
+		<clipnode clip="Bgoesfirst" id="13" name="Bgoesfirst"/>
+		<clipnode clip="waitlean" id="14" name="waitlean"/>
+		<clipnode clip="FH4" id="15" name="FH4"/>
+		<clipnode clip="BshootsY" id="16" name="BshootsY"/>
+		<clipnode clip="fuckyou" id="17" name="fuckyou"/>
+		<clipnode clip="BprepareshootB" id="18" name="BprepareshootB"/>
+		<clipnode clip="DH_1" id="19" name="DH_1"/>
+		<clipnode clip="DH_2" id="20" name="DH_2"/>
+		<clipnode clip="DH_3" id="21" name="DH_3"/>
+		<clipnode clip="BshootsB" id="22" name="BshootsB"/>
+		<clipnode clip="Bdies" id="23" name="Bdies"/>
+		<clipnode clip="youwin" id="24" name="youwin"/>
+		<clipnode clip="YT_1" id="25" name="YT_1"/>
+		<clipnode clip="YT_2" id="26" name="YT_2"/>
+		<clipnode clip="YT_3" id="27" name="YT_3"/>
+		<clipnode clip="continue" id="28" name="continue"/>
+		<clipnode clip="youlose" id="29" name="youlose"/>
+		<clipnode clip="SH1_1" id="30" name="SH1_1"/>
+		<clipnode clip="SH1_2" id="31" name="SH1_2"/>
+		<clipnode clip="SH1_3" id="32" name="SH1_3"/>
+		<clipnode clip="SH2" id="33" name="SH2"/>
+	</stage>
+	
+	<stage name="player" clipxml = "clips.xml">
+		<clipnode id = "1" name = "eyes_closing" clip = "eyes_closing" />
 	</stage>
 </xml>
