@@ -19,7 +19,9 @@ WORDS = [
 ("waitlean","Brandon stands up impatiently"),
 ("FH4","Fine, you chicken shit."),
 ("BshootsY","Brandom points gun at you and shoots"),
-("fuckyou","Fuck you"),
+("FY_1","Fuck you"),
+("FY_2","piece of shit pussy"),
+("FY_3","B glares at you, slowly sits while bringing gun to head"),
 ("BprepareshootB","Brandon anxiously prepares to shoot self"),
 ("DH_1","Him against me! Side by Side!"),
 ("DH_2","Here's to Nick!"),
@@ -36,6 +38,10 @@ WORDS = [
 ("SH1_2","I don't want it for you again"),
 ("SH1_3","after I balled up you gonna pus out"),
 ("SH2","Fine"),
+("lucky_1","You're so fuckin' lucky."),
+("lucky_2","Man..."),
+("lucky_3","I--uh--OK"),
+
 ]
 
 PATH = "words/"
@@ -61,8 +67,9 @@ for i,j in WORDS:
 	y.setAttribute("name",i)
 	y.setAttribute("clip",i)
 	exml.appendChild(y)
+	#exml.appendChild(x)
 	pcode += "def graph_" + i + "(state,clip):\n    if clip.isFinished(): return \"-1\"\n    else: return \"-1\"\n"  
 	counter += 1
 print exml.toprettyxml()
-#print pcode
+print pcode
 	

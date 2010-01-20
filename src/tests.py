@@ -26,10 +26,15 @@ window = pyglet.window.Window()
 @window.event
 def on_draw():
     glClear(GL_COLOR_BUFFER_BIT)
-    img = pyglet.image.load("data/player/close_eyes00003.png")
+    for i in range(100):
+        img = pyglet.image.load("words/gauresized.jpg")
     glEnable (GL_BLEND)
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     img.blit(0,0,0,2000,400)
+    print "lolspourT"
+@window.event
+def update():
+    print "updating"
 
 glClearColor(1.0,0,0,1)
 pyglet.app.run()

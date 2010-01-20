@@ -16,7 +16,7 @@ class roulette(win.Win):
     def update(self,dt):
         self.cont.update()
     def on_draw(self):
-        self.cont.draw()
+        self.cont.draw() 
         #self.sub.draw()
     def press(self):
         self.cont.press()

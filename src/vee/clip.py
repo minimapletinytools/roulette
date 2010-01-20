@@ -39,6 +39,7 @@ import time
 import utils
 import glob
 import stupid
+
 class ImageClip(Clip):
 	def __init__(self,xml):
 		Clip.__init__(self,xml)
@@ -108,6 +109,26 @@ class ImageClip(Clip):
 		pass
 		#TODO return sound playtime...
 
+import imagewheel
+class CachedImageClip(ImageClip):
+	"""
+	identical to ImageClip except uses cached images
+	"""
+	def __init__(self,xml):
+		ImageClip.__init__(self,xml)
+	def grabFrame(self):
+		#this version does not allow for "freezing" on last frame and requires looping otherwise returns None -> nothing is drawn
+		#todo implement freezing, this should be a either a CLIP property or a GRAPHNODE property that overrides whatever the CLIP property is
+		n = self.grabFrameNumber()
+		if int(n) <= int(self.xml.getAttribute("frames"))-1:
+			#print stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".jpg")
+			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png"))
+		#return the last frame in the clip if we specify freeze = True
+		if self.freeze:
+			n = str(int(self.xml.getAttribute("frames"))-1)
+			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png"))
+		return None
+	
 class VideoClip(Clip):
 	"""
 	plays a video clip, not implementede yet

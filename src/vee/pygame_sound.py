@@ -41,7 +41,7 @@ class Sound:
         if filename not in self.soundList:
             self.loadSound(filename)
         #print "playing sound",filename
-        self.soundList[filename].play()
+        self.soundList[filename].play() 
     
     def stopAll(self):
         pygame.mixer.stop()

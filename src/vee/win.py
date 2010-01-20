@@ -22,6 +22,8 @@ class Win( window.Window ):
 		print "key pressed:",symbol,modifiers
 		if symbol == window.key.ESCAPE:
 		    exit()
+		if symbol == window.key.LEFT:
+			print pyglet.resource.get_cached_image_names()
 		if symbol == window.key.SPACE:
 			self.pressTime = time.time()
 			self.press()

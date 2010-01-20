@@ -17,4 +17,6 @@ pyglet.resource.path.append("data/sound")
 pyglet.resource.reindex()
 
 import pygame_sound
+import imagewheel
 sound = pygame_sound.Sound()
+wheel = imagewheel.ImageWheel()

@@ -6,35 +6,45 @@ from pyglet import resource
 import utils
 import drawer
 import graph
+import time
 
+#TODO add image wheel if things start slowing down since you are loading 3 images each frame
 class Controller:
 	"""
 	controller may as well be renamed as state, controller handles all state information, by default, it seems controller comes with a clip manager
 	maybe it would be better if we could insert plugins into controller and plugins get controlled automatically by the state machine
 	"""
 	def __init__(self,exml):
-		self.man = ClipManager(utils.getChildWithAttribute(exml,"stage","name","brandon"),self)
-		self.overlay = ClipManager(utils.getChildWithAttribute(exml,"stage","name","player"),self)
 		#set up state vars
+		self.exml = exml
+		self.resetStates()
+	
+	def resetStates(self):
+		self.man = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","brandon"),self)
+		self.eyes = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","eyes"),self)
+		self.player = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","player"),self)
 		self.state = dict()
-		for e in [f for f in utils.getChild(exml,"vars").childNodes if f.nodeType == xml.dom.Node.TEXT_NODE]:
+		for e in [f for f in utils.getChild(self.exml,"vars").childNodes if f.nodeType == xml.dom.Node.TEXT_NODE]:
 			for g in e.data.split():
 				self.state[g] = 0
 		graph.init_graph(self.state)
-		
 	def update(self):
 		self.man.update()
-		self.overlay.update()
+		self.player.update()
+		self.eyes.update()
+		if "RESET" in self.state:
+			self.resetStates()
 	def draw(self):
 		self.man.draw()
-		#self.overlay.draw()
+		self.player.draw()
+		self.eyes.draw()
 	def press(self):
-		self.state["press"] = True
+		#these should be passed into graph.py instead
+		if not self.state["press"]:
+			self.state["time_pressed"] = time.time()
+			self.state["press"] = True 
 	def release(self,dt):
-		if self.state["press"]:
-		  self.state["time_pressed"] = dt
-		  self.state["press"] = False
-		
+		self.state["press"] = False		
 
 class ClipManager():
 	def __init__(self,xml,parent):
