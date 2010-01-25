@@ -30,7 +30,7 @@
 		lose
 		blinking
 	</vars>
-	<stage name="brandon" clipxml = "clips.xml">
+	<stage name="brandon" clipxml = "nate_testing_clips.xml">
 		<clipnode clip="start" id="1" name="start"/>
 		<clipnode clip="intro" id="2" name="intro"/>
 		<clipnode clip="wait" id="3" name="wait"/>

@@ -77,6 +77,8 @@ def graph_start(state,clip):
         return "intro"
     else: return "-1"
 def graph_wait(state,clip):
+    if clip.getTimeLeft() < 0.2:
+        state["blinking"] = True
     if state["lose"]:
         return "continue"
     if state["player_shoot_state"] == 2:
@@ -99,6 +101,8 @@ def graph_wait(state,clip):
     return "-1"
 
 def graph_waitlean(state,clip):
+    if clip.getTimeLeft() < 0.2:
+        state["blinking"] = True
     if state["lose"]:
         return "continue"
     if state["player_shoot_state"] == 2:
@@ -117,7 +121,7 @@ def graph_waitlean(state,clip):
     else: return "-1"
     
 def graph_intro(state,clip):
-    if clip.getTimeLeft() < 0.3:
+    if clip.getTimeLeft() < 0.2:
         state["blinking"] = True
     if clip.isFinished():
         #we allow player to shoot himself now
@@ -128,6 +132,8 @@ def graph_intro(state,clip):
     else: return "-1"
     
 def FH_generic(state,clip,name):
+    if clip.getTimeLeft() < 0.2:
+        state["blinking"] = True
     if state["lose"]:
         return "continue"
     if clip.isFinished():
