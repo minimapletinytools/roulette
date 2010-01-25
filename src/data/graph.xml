@@ -14,6 +14,7 @@
 		FH_state - determines which first hesitate state player is at
 		eyes_open - True or False, determines if eyes are open or closed
 		lose - determine if you are dead or not :)
+		blinking - used to trigger an eye blink
 		 -->
 		press
 		time_pressed
@@ -27,6 +28,7 @@
 		FH_state
 		eyes_open
 		lose
+		blinking
 	</vars>
 	<stage name="brandon" clipxml = "clips.xml">
 		<clipnode clip="start" id="1" name="start"/>
@@ -80,5 +82,6 @@
 		<clipnode id = "1" name = "eyes_blank" clip = "eyes_blank" />
 		<clipnode id = "2" name = "eyes_closing" clip = "eyes_closing" />
 		<clipnode id = "3" name = "eyes_openning" clip = "eyes_openning" />
+		<clipnode id = "4" name = "eyes_blink" clip = "eyes_blink" />
 	</stage>
 </xml>

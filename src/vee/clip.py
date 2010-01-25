@@ -19,6 +19,8 @@ class Clip():
 		pass
 	def grabFrameTime(self):
 		pass
+	def getTimeLeft(self):
+		pass
 	
 class DummyClip(Clip):
 	"""
@@ -60,6 +62,16 @@ class ImageClip(Clip):
 		if self.start:
 			return time.time()-self.start
 		else: return 0
+	def getTimeLeft(self):
+		return self.getLength() - self.getTime()
+	def getLength(self):	
+		if self.xml.hasAttribute("duration"):
+			return float(self.xml.getAttribute("duration"))
+		elif self.sound: 
+			return glob.sound.getSound(self.sound).get_length()
+		else:
+			print "time left error" 
+			return 0
 	def preload(self,video = True,sound = True):
 		if sound:
 			glob.sound.loadSound(self.sound)
@@ -91,6 +103,7 @@ class ImageClip(Clip):
 		if framexml:
 			return resource.image(stupid.splitjoin(framexml.getAttribute("folder")+framexml.getAttribute("filename")))
 		else: return None
+	
 	def isFinished(self):
 		"""
 		returns true if clip has started playing and is finished playing
@@ -99,9 +112,12 @@ class ImageClip(Clip):
 		"""
 		#TODO add some type of error handling in case sound object does not exist
 		if self.start:
-			if self.xml.hasAttribute("duration"):
-				return self.getTime() > float(self.xml.getAttribute("duration"))
-			else: return self.getTime() > glob.sound.getSound(self.sound).get_length() 
+			if self.getTimeLeft() <= 0:
+				return True
+			else: return False
+			#if self.xml.hasAttribute("duration"):
+			#	return self.getTime() > float(self.xml.getAttribute("duration"))
+			#else: return self.getTime() > glob.sound.getSound(self.sound).get_length() 
 		return False
 	def grabFrameNumber(self):
 		return str((int)(self.getTime()/((int)(self.xml.getAttribute("durinms"))/1000.0)))
@@ -119,14 +135,16 @@ class CachedImageClip(ImageClip):
 	def grabFrame(self):
 		#this version does not allow for "freezing" on last frame and requires looping otherwise returns None -> nothing is drawn
 		#todo implement freezing, this should be a either a CLIP property or a GRAPHNODE property that overrides whatever the CLIP property is
+		if self.xml.hasAttribute("suffix"): suffix = self.xml.getAttribute("suffix")
+		else: suffix = ".png"
 		n = self.grabFrameNumber()
 		if int(n) <= int(self.xml.getAttribute("frames"))-1:
 			#print stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".jpg")
-			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png"))
+			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+suffix))
 		#return the last frame in the clip if we specify freeze = True
 		if self.freeze:
 			n = str(int(self.xml.getAttribute("frames"))-1)
-			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png"))
+			return glob.wheel.getImage(stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+suffix))
 		return None
 	
 class VideoClip(Clip):

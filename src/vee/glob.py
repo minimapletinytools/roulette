@@ -14,6 +14,7 @@ pyglet.options['audio'] = ('alsa', 'alsa', 'directsound','silent')
 pyglet.resource.path.append("data")
 #TODO this is probably not a good idea, yous hould really allow for directories, use split and then rejoin with os.path.join
 pyglet.resource.path.append("data/sound")
+pyglet.resource.path.append("data/jake_sound")
 pyglet.resource.reindex()
 
 import pygame_sound

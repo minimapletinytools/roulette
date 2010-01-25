@@ -87,7 +87,7 @@ class ClipManager():
 			print "switched to",new
 			self.getActiveClip().play()
 	def draw(self):
-		drawer.draw(self.getActiveClip().grabFrame(),50,50)
+		drawer.draw(self.getActiveClip().grabFrame(),0,0)
 	def getActiveClip(self):
 		return self.clipmap[self.graphmap[(self.active)].getAttribute("clip")]
 				

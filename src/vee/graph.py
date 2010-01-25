@@ -117,10 +117,13 @@ def graph_waitlean(state,clip):
     else: return "-1"
     
 def graph_intro(state,clip):
+    if clip.getTimeLeft() < 0.3:
+        state["blinking"] = True
     if clip.isFinished():
         #we allow player to shoot himself now
         state["turn"] = "Y" 
-        saveMemory(state,"wait")
+        #TODO fix this
+        #saveMemory(state,"wait")
         return "wait"
     else: return "-1"
     
@@ -325,8 +328,6 @@ def graph_player_handout(state,clip):
     else: return "-1"
     
     
-    
-    
 #eye functions
 def graph_eyes_closing(state,clip):
     if clip.isFinished() and state["eyes_open"]:
@@ -336,6 +337,14 @@ def graph_eyes_openning(state,clip):
     if clip.isFinished(): return "eyes_blank"
     else: return "-1"
 def graph_eyes_blank(state,clip):
+    #TODO fix bug here where you can not shoot when blinking
+    if state["blinking"]:
+        return "eyes_blink"
     if not state["eyes_open"]:
         return "eyes_closing"
     return "-1"
+def graph_eyes_blink(state,clip):
+    if clip.isFinished():
+        state["blinking"] = False 
+        return "eyes_blank"
+    else: return "-1"
