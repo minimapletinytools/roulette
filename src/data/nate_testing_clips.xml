@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <clips>
 	<clip duration="2.55319727891" durinms="10000" folder="words/" frames="1" name="start" prefix="blamocreepyblue" sound="start.wav" freeze = "true" type="CachedImageClip"/>
-	<clip name="intro" duration="9.850" sound = "jake_sound/intro_02.aiff" durinms="90" folder="jake_clips/intro_02/" prefix="intro_02" suffix =".jpg" width="320" height="240" frames="110" type="CachedImageClip"/>
-	<clip name="wait" durinms="90" sound = "" duration="6.300" folder="jake_clips/wait_01/" prefix="wait_01" suffix=".jpg" type="CachedImageClip" width="320" height="240" frames="70"/>
-	<clip name="FH1_1" duration="10.980" videoname="videos/FH1_1.mov" folder="jake_clips/FH1_1/" prefix="FH1_1" suffix=".jpg" sound="jake_sound/FH1_1.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="123"/>
-	<clip name="FH1_2" duration="5.760" videoname="videos/FH1_2.mov" folder="jake_clips/FH1_2/" prefix="FH1_2" suffix=".jpg" sound="jake_sound/FH1_2.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="64"/>
-	<clip name="FH1_3" duration="5.220" videoname="videos/FH1_3.mov" folder="jake_clips/FH1_3/" prefix="FH1_3" suffix=".jpg" sound="jake_sound/FH1_3.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="58"/>
+	<clip name="intro" duration="11.790" videoname="videos/nate/intro_03.mov" folder="nate_clips/intro_03/" prefix="intro_03" suffix=".jpg" sound="nate_sound/intro_03.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="131"/>
+	<clip name="wait" duration="3.960" videoname="videos/nate/wait_01.mov" folder="nate_clips/wait_01/" prefix="wait_01" suffix=".jpg" sound="" durinms="90" type="CachedImageClip" width="320" height="240" frames="44"/>
+	<clip name="FH1_1" duration="6.930" videoname="videos/nate/FH1.1_2.mov" folder="nate_clips/FH1.1_2/" prefix="FH1.1_2" suffix=".jpg" sound="nate_sound/FH1_1.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="77"/>
+	<clip name="FH1_2" duration="4.230" videoname="videos/nate/FH1.2_2.mov" folder="nate_clips/FH1.2_2/" prefix="FH1.2_2" suffix=".jpg" sound="nate_sound/FH1_2.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="47"/>
+	<clip name="FH1_3" duration="5.220" videoname="videos/FH1_3.mov" folder="jake_clips/FH1_3/" prefix="FH1_3" suffix=".jpg" sound="" durinms="90" type="CachedImageClip" width="320" height="240" frames="58"/>
 	<clip duration="2.3916553288" durinms="10000" folder="words/" frames="1" name="FH2_1" prefix="FH2_1" sound="FH2_1.wav" type="CachedImageClip"/>
 	<clip duration="3.95900226757" durinms="10000" folder="words/" frames="1" name="FSFH2_2" prefix="FSFH2_2" sound="FSFH2_2.wav" type="CachedImageClip"/>
 	<clip duration="2.54258503401" durinms="10000" folder="words/" frames="1" name="FSFH2_3" prefix="FSFH2_3" sound="FSFH2_3.wav" type="CachedImageClip"/>

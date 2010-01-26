@@ -57,7 +57,8 @@ class ImageClip(Clip):
 		self.start = time.time()
 		glob.sound.play(self.sound)
 	def stop(self):
-		glob.sound.stopAll()
+		pass
+		#glob.sound.stopAll()
 	def getTime(self):
 		if self.start:
 			return time.time()-self.start

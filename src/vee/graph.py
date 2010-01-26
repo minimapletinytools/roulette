@@ -1,5 +1,6 @@
 import time
 import random #use random.choice(list) to get random elt from list
+#TODO this is broekn with multiple clip managers. need to give each one an id
 def getTimeOnFrame(state):
     return time.time()-state["time_enter_frame"]
 def getSubset(aset,idlist):
@@ -79,13 +80,14 @@ def graph_start(state,clip):
 def graph_wait(state,clip):
     if clip.getTimeLeft() < 0.2:
         state["blinking"] = True
+        
     if state["lose"]:
         return "continue"
     if state["player_shoot_state"] == 2:
         state["player_shoot_state"] = 0
         return random.choice(getSubset(state["visited"],["lucky",]))[1]
     if clip.isFinished():
-        if state["player_shoot_state"] == 0 and getTimeOnFrame(state) > 1:
+        if state["player_shoot_state"] == 0:
             if state["first_hesitate"]:
                 if state["FH_state"] == 0:
                     return random.choice(getSubset(state["visited"],["FH1",]))[1]
@@ -96,7 +98,7 @@ def graph_wait(state,clip):
                     #alternatively, B decides to shoot self
                     return random.choice(getSubset(state["visited"],["FH3",]))[1]
             else:    #second hesitate
-                return random.choice(getSubset(state["visited"],["SH1",]))[1]                
+                return random.choice(getSubset(state["visited"],["SH1",]))[1]        
         return "wait"
     return "-1"
 
