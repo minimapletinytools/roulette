@@ -14,9 +14,16 @@ mess around with filter for Jake and Nate till you find something nice.
 
 start converting video and put it in I guess???
 
+make clicky noise and gunshot
+
 fix up engine: 
-sound issue (easy fix, but stop all sounds in graph.py only where you need them)
+DONE selective sound turning offing (Sound.stop())
 DONE memory issue
+
+new features:
+spiffy title screen and logo
+spiffy continue screen
+spiffy game over screen
 
 
 

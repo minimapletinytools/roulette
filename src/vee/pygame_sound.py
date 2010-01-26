@@ -42,6 +42,9 @@ class Sound:
             self.loadSound(filename)
         print "playing sound",filename
         self.soundList[filename].play()
-    
+    def stop(self,filename):
+        if filename in self.soundList:
+            print "stopped",filename
+            self.soundList[filename].stop()
     def stopAll(self):
         pygame.mixer.stop()
