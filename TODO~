@@ -1,11 +1,44 @@
 TODO 
 
-determine graphing possibilities, be practical!
+for 1/26/09 if not today:
 
-determine state changes based on input and time. Create some system to make handling time based state changes easy. think about it. deadline jan 1 end of today!
+crop out all clips, leave extra space.
 
-do fako version and put up on SB. Do it jan 2!
+get extra wait clips for Nate
 
-clean up code a little bit, consider how you would do future versions. plan for it. 
+write new transition graphs for both players ugggg.
+
+do hand in hand out editting for at least one character
+
+mess around with filter for Jake and Nate till you find something nice.
+
+start converting video and put it in I guess???
+
+fix up engine.  
+sound issue (easy fix, but stop all sounds in graph.py only where you need them)
+DONE memory issue
+
+
+
+DONE tomorrow:
+check out cameras, 
+open door to shoot room, 
+bring up table, 
+set up lights, 
+setup tripod and camera, 
+put tape on table to marke hand/gun spots
+print diagram
+print script
+print scenes
+get cash to pay actors
+
+
+DONE determine graphing possibilities, be practical!
+
+DONE determine state changes based on input and time. Create some system to make handling time based state changes easy. think about it. deadline jan 1 end of today!
+
+DONE do fako version and put up on SB. Do it jan 2!
+
+DONE clean up code a little bit, consider how you would do future versions. plan for it. 
 
 DONE refractor code, separate into vee module

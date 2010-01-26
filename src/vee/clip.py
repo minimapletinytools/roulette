@@ -21,6 +21,9 @@ class Clip():
 		pass
 	def getTimeLeft(self):
 		pass
+	def skip(self):
+		#jumps to end of frame
+		pass
 	
 class DummyClip(Clip):
 	"""
@@ -125,6 +128,8 @@ class ImageClip(Clip):
 	def grabFrameTime(self):
 		pass
 		#TODO return sound playtime...
+	def skip(self):
+		self.start -= self.getLength()
 
 import imagewheel
 class CachedImageClip(ImageClip):

@@ -43,6 +43,8 @@ class Controller:
 		if not self.state["press"]:
 			self.state["time_pressed"] = time.time()
 			self.state["press"] = True 
+	def skip(self):
+		self.man.getActiveClip().skip()
 	def release(self,dt):
 		self.state["press"] = False		
 

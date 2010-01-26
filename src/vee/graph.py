@@ -21,7 +21,7 @@ def removeElementFromSet(aset,elt):
 def saveMemory(state,frame):
     if "MEMORY" in state:
         del state["MEMORY"]
-    memory = (state,frame)
+    memory = (dict(state),frame)
     state["MEMORY"] = memory
     print "memory saved", memory
     
@@ -29,11 +29,10 @@ def loadMemory(state):
     if "MEMORY" in state:
         memory = state["MEMORY"]
     else:   #this case should not happen
+        print "resetting game"
         state["RESET"] = 0
         return "-1"
-    del state["MEMORY"]
-    state = memory[0]
-    return memory[1]
+    return memory
 
 def init_graph(state):
     state["time_enter_frame"] = time.time()
@@ -80,7 +79,6 @@ def graph_start(state,clip):
 def graph_wait(state,clip):
     if clip.getTimeLeft() < 0.2:
         state["blinking"] = True
-        
     if state["lose"]:
         return "continue"
     if state["player_shoot_state"] == 2:
@@ -129,7 +127,7 @@ def graph_intro(state,clip):
         #we allow player to shoot himself now
         state["turn"] = "Y" 
         #TODO fix this
-        #saveMemory(state,"wait")
+        saveMemory(state,"wait")
         return "wait"
     else: return "-1"
     
@@ -258,9 +256,15 @@ def graph_YT_3(state,clip):
     return YT_generic(state,clip,"YT_3")
 
 def graph_continue(state,clip):
-    if state["press"] and time.time() - state["time_pressed"] < 0.1:
+    if state["press"] and clip.getTime() > 1:
         state["press"] = False
-        return loadMemory(state)
+        s,r =  loadMemory(state)
+        if "MEMORY" in state:
+            s["MEMORY"] = state["MEMORY"]
+        #TODO state is not being assigned properly, need to do value by value
+        state.clear()
+        state.update(s)
+        return r
     if clip.isFinished(): return "youlose"
     else: return "-1"
 def graph_youlose(state,clip):
@@ -319,7 +323,8 @@ def graph_player_blank_patch(state,clip):
         state["press"] = False
         print "KAPOW, Y shoots Y"
         state["turn"] = "B"
-        if random.randint(0,5) <= state["shots_fired"]-1:
+        #if random.randint(0,5) <= state["shots_fired"]-1:
+        if 1:
             state["lose"] = True
             return "player_blank_patch"
         else:
