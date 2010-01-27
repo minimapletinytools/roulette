@@ -33,6 +33,7 @@ def draw(img,ox = 0, oy = 0):
     glEnable(GL_BLEND)
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
     if init and img:
+        glTexParameteri(img.texture.target,GL_TEXTURE_MAG_FILTER, GL_NEAREST)
+        glTexParameteri(img.texture.target,GL_TEXTURE_MIN_FILTER, GL_NEAREST)
         w,h = largestrect(img.width,img.height,width-ox,height-oy)
-        #drawing from lower left corner
         img.blit((width-w)/2,(height-h)/2,0,w,h)

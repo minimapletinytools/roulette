@@ -5,10 +5,15 @@ class Subtitles():
     #document has static formatting and text layout 
     #font size calculated relative to screen size
     def __init__(self):
-        self.activeSub = document.UnformattedDocument("default text")
+        self.activeSub = document.UnformattedDocument("default text but there is more here haha lololol what is going on")
+        self.activeSub.set_style(0, len(self.activeSub.text), 
+            dict(color=(255, 255, 255, 255),font_size=25,align="center")
+        )
         self.layout = layout.TextLayout(self.activeSub,600,200,multiline=True)
         self.layout.x = 300
-        self.layout.y = 300
+        self.layout.anchor_x = "center"
+        self.layout.anchor_y = "center"
+        self.layout.y = 25
         self.playing = False
         self.loaded = False
         self.updated = False

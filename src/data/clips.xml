@@ -6,9 +6,10 @@
 	<clip name="FH1_1" duration="10.980" videoname="videos/FH1_1.mov" folder="jake_clips/FH1_1/" prefix="FH1_1" suffix=".jpg" sound="jake_sound/FH1_1.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="123"/>
 	<clip name="FH1_2" duration="5.760" videoname="videos/FH1_2.mov" folder="jake_clips/FH1_2/" prefix="FH1_2" suffix=".jpg" sound="jake_sound/FH1_2.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="64"/>
 	<clip name="FH1_3" duration="5.220" videoname="videos/FH1_3.mov" folder="jake_clips/FH1_3/" prefix="FH1_3" suffix=".jpg" sound="jake_sound/FH1_3.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="58"/>
-	<clip duration="2.3916553288" durinms="10000" folder="words/" frames="1" name="FH2_1" prefix="FH2_1" sound="FH2_1.wav" type="CachedImageClip"/>
-	<clip duration="3.95900226757" durinms="10000" folder="words/" frames="1" name="FSFH2_2" prefix="FSFH2_2" sound="FSFH2_2.wav" type="CachedImageClip"/>
-	<clip duration="2.54258503401" durinms="10000" folder="words/" frames="1" name="FSFH2_3" prefix="FSFH2_3" sound="FSFH2_3.wav" type="CachedImageClip"/>
+	<clip name="FH2_1" videoname="videos/jake/FH2_1.mov" folder="jake_clips/FH2_1/" prefix="FH2_1" sound="jake_sound/FH2_1.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="93" duration="8.37"/>
+	<clip name="FSFH2_2" videoname="videos/jake/FH2_2.mov" folder="jake_clips/FH2_2/" prefix="FH2_2" sound="jake_sound/FH2_2.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="80" duration="7.2000003"/>
+	<clip name="FSFH2_3" videoname="videos/jake/FH2_3.mov" folder="jake_clips/FH2_3/" prefix="FH2_3" sound="jake_sound/FH2_3.aiff" durinms="90" type="CachedImageClip" width="320" height="240" frames="58" duration="5.2200003"/>
+	
 	<clip duration="3.66875283447" durinms="10000" folder="words/" frames="1" name="FH3_1" prefix="FH3_1" sound="FH3_1.wav" type="CachedImageClip"/>
 	<clip duration="5.90947845805" durinms="10000" folder="words/" frames="1" name="FH3_2" prefix="FH3_2" sound="FH3_2.wav" type="CachedImageClip"/>
 	<clip duration="3.41333333333" durinms="10000" folder="words/" frames="1" name="FH3_3" prefix="FH3_3" sound="FH3_3.wav" type="CachedImageClip"/>
