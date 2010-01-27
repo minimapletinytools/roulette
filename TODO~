@@ -14,15 +14,14 @@ mess around with filter for Jake and Nate till you find something nice.
 
 start converting video and put it in I guess???
 
-make clicky noise and gunshot
-
 fix up engine: 
-selective sound turning offing (Sound.stop())
+DONE selective sound turning offing (Sound.stop())
 DONE memory issue
 
 new features:
+make clicky noise and gunshot
 spiffy title screen and logo
-spiffy continue screen
+spiffy continue screen, add blank stuff before continue screen
 spiffy game over screen
 
 

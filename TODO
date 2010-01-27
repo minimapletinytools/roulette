@@ -8,24 +8,21 @@ get extra wait clips for Nate
 
 write new transition graphs for both players ugggg.
 
-do hand in hand out editting for at least one character
+DONE do hand in hand out editting for at least one character
 
 mess around with filter for Jake and Nate till you find something nice.
 
 start converting video and put it in I guess???
 
+new features:
 make clicky noise and gunshot
+spiffy title screen and logo
+spiffy continue screen, add blank stuff before continue screen
+spiffy game over screen
 
 fix up engine: 
 DONE selective sound turning offing (Sound.stop())
 DONE memory issue
-
-new features:
-spiffy title screen and logo
-spiffy continue screen
-spiffy game over screen
-
-
 
 DONE tomorrow:
 check out cameras, 

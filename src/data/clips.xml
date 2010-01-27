@@ -43,9 +43,9 @@
 	
 	<!--player clips clips -->
 	<clip name = "player_blank" folder = "eyes" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip name = "player_blank_patch" folder = "player/" prefix = "patch" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip name = "player_handin" folder = "player/" prefix = "handin" sound = "" duration = "1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip name = "player_handout" folder = "player/" prefix = "handout" sound = "" duration = "1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
+	<clip name = "player_blank_patch" folder = "jake_clips/cover/" prefix = "cover" sound = "" duration = "0.1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
+	<clip duration="1.700" durinms="100" folder="jake_clips/handin/" frames="17" name="player_handin" prefix="handin" suffix=".png" type="CachedImageClip"/>
+	<clip duration="1.700" durinms="100" folder="jake_clips/handout/" frames="17" name="player_handout" prefix="handout" suffix=".png" type="CachedImageClip"/>
 	
 	<!--eye clips -->
 	<clip name = "eyes_blank" folder = "eyes/" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>

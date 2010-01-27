@@ -315,7 +315,9 @@ def graph_player_blank(state,clip):
         
     return "-1"
 def graph_player_blank_patch(state,clip):
-    state["eyes_open"] = False
+    print "blank!"
+    if clip.getTime() > 0.5:
+        state["eyes_open"] = False
     if not state["press"]:
         state["player_shoot_state"] = 0
         return "player_handout" 
@@ -326,7 +328,7 @@ def graph_player_blank_patch(state,clip):
         #if random.randint(0,5) <= state["shots_fired"]-1:
         if 1:
             state["lose"] = True
-            return "player_blank_patch"
+            return "player_blank"
         else:
             state["player_shoot_state"] = 2
             #TODO clicky noise"
@@ -343,6 +345,8 @@ def graph_player_handout(state,clip):
     
 #eye functions
 def graph_eyes_closing(state,clip):
+    if state["lose"]:
+        return "eyes_blank"
     if clip.isFinished() and state["eyes_open"]:
         return "eyes_openning" 
     else: return "-1"
