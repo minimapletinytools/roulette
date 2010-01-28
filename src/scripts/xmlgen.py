@@ -1,10 +1,10 @@
 import xml.dom.minidom
 
-name = "player_handout"
+name = "fader"
 prefix = "handout"
-folder = "player/jake_clips/handout"
+folder = "fader/"
 suffix = ".png"
-type = "CachedImageClip"
+ctype = "CachedImageClip"
 frames = 17
 
 durinms = 200
@@ -14,7 +14,7 @@ attr = dict()
 attr["name"] = name
 attr["duration"] = frames*durinms
 attr["durinms"] = durinms
-attr["type"] = type
+attr["type"] = ctype
 attr["folder"] = folder
 attr["suffix"] = suffix
 attr["frames"] = frames 
