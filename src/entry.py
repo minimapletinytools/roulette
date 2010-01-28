@@ -18,7 +18,7 @@ class roulette(win.Win):
         self.cont.update()
     def on_draw(self):
         self.cont.draw() 
-        self.sub.draw()
+        #self.sub.draw()
     def press(self):
         self.cont.press()
     def skip(self):
@@ -27,8 +27,8 @@ class roulette(win.Win):
         self.cont.release(dt)
     
 def run():
-    #w = roulette(fullscreen = True)
-    w = roulette()
+    w = roulette(fullscreen = True)
+    #w = roulette()
     pyglet.app.run()
 if __name__ == "__main__":
     run()
