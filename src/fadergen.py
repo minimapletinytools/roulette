@@ -1,12 +1,18 @@
 import pygame
+import math
 from pygame import gfxdraw
 
 size = w,h = 640,480
-diag = 60
+diag = 50
 center = size[0]/2,size[1]/2
 iterations = 20
 color = 0,0,0
 bgcolor = 255,255,255
+
+rmin =  -200
+rmax = 200
+rstart = -100
+rend = 600
 
 pygame.init()
 screen = pygame.display.set_mode(size,pygame.DOUBLEBUF)
@@ -29,12 +35,25 @@ diam = list()
 for i in range(0,int(w*1.3/diag)):
     for j in range(0,int(h*2.3/diag)):
         diam.append(diamond(i*diag-(j%2)*diag/2,j*diag/2-diag/2))
-
+def p():
+    return (iterations-i)/float(iterations)
+def q():
+    return 1-p()
+def d(x,y):
+    return math.sqrt((x-center[0])*(x-center[0]) + (y-center[1])*(y-center[1]))
 for i in range(0,iterations):
-    print i
+    radius = rstart*p()  + rend*q()
+    print radius
     screen.fill(bgcolor)
     for e in diam:
-        e.diag *= .93
+        v = (d(e.x,e.y) - radius)
+        if v < rmin:
+            e.diag = 0
+	elif v > rmax:
+	    e.diag = diag
+	else:
+	    e.diag = diag*math.sqrt(math.fabs((v-rmin)/float(rmax - rmin)  -.1 ))
     for e in diam:
         e.draw(screen)
+    pygame.image.save(screen,"./data/fader/"+str(i).zfill(5)+".png")
     pygame.display.flip()
