@@ -1,13 +1,13 @@
 import xml.dom.minidom
 
-name = "fader"
-prefix = "handout"
-folder = "fader/"
+name = "fadeout"
+prefix = "fadeout"
+folder = "fader/fadeout/"
 suffix = ".png"
 ctype = "CachedImageClip"
-frames = 17
+frames = 20
 
-durinms = 200
+durinms = 50
 
 
 attr = dict()

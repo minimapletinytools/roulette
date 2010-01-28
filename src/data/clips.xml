@@ -49,9 +49,17 @@
 	<clip duration="1.700" durinms="100" folder="jake_clips/handout/" frames="17" name="player_handout" prefix="handout" suffix=".png" type="CachedImageClip"/>
 	
 	<!--eye clips -->
+	<!-- TODO to improve performance, you should use dummy clip for eyes_blank and some special function that halts all drawing for eyes_black-->
 	<clip name = "eyes_blank" folder = "eyes/" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
+	<clip name = "eyes_black" folder = "eyes/" prefix = "open_eyes" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
 	<clip name = "eyes_closing" folder = "eyes/" prefix = "close_eyes" sound = "" duration = ".5" durinms = "62" frames = "9" freeze = "yes" type = "CachedImageClip"/> 
 	<clip name = "eyes_blink" folder = "eyes/" prefix = "eyes_blink" sound = "" duration = ".5" durinms = "31" frames = "18" freeze = "yes" type = "CachedImageClip"/>
 	<clip name = "eyes_openning" folder = "eyes/" prefix = "open_eyes" sound = "" duration = ".5" durinms = "62" frames = "9" freeze = "yes" type = "CachedImageClip"/>
+	
+	<!--bonus clips -->
+	<clip duration="1000" durinms="50" folder="fader/fadein/" frames="20" name="fadein" prefix="fadein" suffix=".png" type="CachedImageClip"/>
+	<clip duration="1000" durinms="50" folder="fader/fadeout/" frames="20" name="fadeout" prefix="fadeout" suffix=".png" type="CachedImageClip"/>
+	
+	
 </clips>
 

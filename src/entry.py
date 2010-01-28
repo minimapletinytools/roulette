@@ -27,8 +27,8 @@ class roulette(win.Win):
         self.cont.release(dt)
     
 def run():
-    w = roulette(fullscreen = True)
-    #w = roulette()
+    #w = roulette(fullscreen = True)
+    w = roulette()
     pyglet.app.run()
 if __name__ == "__main__":
     run()

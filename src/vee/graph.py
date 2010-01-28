@@ -365,3 +365,23 @@ def graph_eyes_blink(state,clip):
         state["blinking"] = False 
         return "eyes_blank"
     else: return "-1"
+    
+def graph_fade_blank(state,clip):
+    if clip.isFinished():
+        if state["fade"]:
+            return "fade_fadeout"
+        return "-1"
+    else: return "-1"
+def graph_fade_black(state,clip):
+    if clip.isFinished():
+        if not state["fade"]:
+            return "fade_fadein"
+    else: return "-1"
+def graph_fade_fadein(state,clip):
+    if clip.isFinished():
+        return "fade_blank"
+    else: return "-1"
+def graph_fade_fadeout(state,clip):
+    if clip.isFinished():
+        return "fade_black"
+    else: return "-1"

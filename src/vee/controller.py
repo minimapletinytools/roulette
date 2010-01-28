@@ -23,6 +23,7 @@ class Controller:
 		self.man = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","brandon"),self)
 		self.eyes = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","eyes"),self)
 		self.player = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","player"),self)
+		self.fade = ClipManager(utils.getChildWithAttribute(self.exml,"stage","name","fade"),self)
 		self.state = dict()
 		for e in [f for f in utils.getChild(self.exml,"vars").childNodes if f.nodeType == xml.dom.Node.TEXT_NODE]:
 			for g in e.data.split():
@@ -32,12 +33,14 @@ class Controller:
 		self.man.update()
 		self.player.update()
 		self.eyes.update()
+		self.fade.update()
 		if "RESET" in self.state:
 			self.resetStates()
 	def draw(self):
 		self.man.draw()
 		self.player.draw()
 		self.eyes.draw()
+		self.fade.draw()
 	def press(self):
 		#these should be passed into graph.py instead
 		if not self.state["press"]:
