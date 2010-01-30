@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<vars>
+		<!--
+		press - True if button is pressed False otherwise OR False if Y shoots self and still has button pressed
+		time_pressed - Time in seconds when button was pressed (press turns from False to True)
+		time_enter_frame - Time in seconds on entering a NEW frame
+		first_shot - True if this is first shot of the game starts True
+		first_hesitate - True if this is first time player hesitates starts True
+		visited - Set of unvisited clips, clips get removed as they are visited
+		shots_fired - Number of times gun has been shot. Used to determine if someone dies or not
+		turn - 0 "B" or "Y" for neither (intro, start, etc), "B" for Brandon's turn, "Y" for your turn
+		player_shoot_state - int state variable representing which shoot state player is in 0 - can shoot 1 - is shooting 2 - shot and no bullet
+		FH_state - determines which first hesitate state player is at
+		SH_state - determines which SH state player is at
+		eyes_open - True or False, determines if eyes are open or closed
+		lose - determine if you are dead or not :)
+		blinking - used to trigger an eye blink
+		fade - controls fadein/out
+		 -->
+		press
+		time_pressed
+		time_enter_frame
+		first_shot
+		first_hesitate
+		visited
+		shots_fired
+		turn
+		player_shoot_state
+		FH_state
+		SH_state
+		eyes_open
+		lose
+		blinking
+		fade
+	</vars>
+	<stage name="brandon" clipxml = "jake_clips_FINAL.xml">
+		<clipnode clip="start" id="1" name="start"/>
+		<clipnode clip="intro" id="2" name="intro"/>
+		<clipnode clip="wait" id="3" name="wait"/>
+		<clipnode clip="FH1_1" id="4" name="FH1_1"/>
+		<clipnode clip="FH1_2" id="5" name="FH1_2"/>
+		<clipnode clip="FH1_3" id="6" name="FH1_3"/>
+		<clipnode clip="FH2_1" id="7" name="FH2_1"/>
+		<clipnode clip="FSFH2_2" id="8" name="FSFH2_2"/>
+		<clipnode clip="FSFH2_3" id="9" name="FSFH2_3"/>
+		<clipnode clip="Bgoesfirst_1" id="10" name="Bgoesfirst_1" />
+		<clipnode clip="Bgoesfirst_2" id="10" name="Bgoesfirst_2" />
+		<clipnode clip="Bgoesfirst_3" id="10" name="Bgoesfirst_3" />
+		<clipnode clip="waitlean" id="14" name="waitlean"/>
+		<clipnode clip="FH4" id="15" name="FH4"/>
+		<clipnode clip="BshootsY" id="16" name="BshootsY"/>
+		<clipnode clip="FY_1" id="17" name="FY_1"/>
+		<clipnode clip="FY_2" id="18" name="FY_2"/>
+		<clipnode clip="FY_3" id="19" name="FY_3"/>
+		<clipnode clip="BprepareshootB" id="20" name="BprepareshootB"/>
+		<clipnode clip="DH_1" id="21" name="DH_1"/>
+		<clipnode clip="DH_2" id="22" name="DH_2"/>
+		<clipnode clip="DH_3" id="23" name="DH_3"/>
+		<clipnode clip="BshootsB_cut" id="24" name="BshootsB_cut"/>
+		
+		<clipnode clip="youwin" id="26" name="youwin"/>
+		<clipnode clip="YT_1" id="27" name="YT_1"/>
+		<clipnode clip="YT_2" id="28" name="YT_2"/>
+		<clipnode clip="YT_3" id="29" name="YT_3"/>
+		<clipnode clip="continue" id="30" name="continue"/>
+		<clipnode clip="youlose" id="31" name="youlose"/>
+		<clipnode clip="SH1_1" id="32" name="SH1_1"/>
+		<clipnode clip="SH1_2" id="33" name="SH1_2"/>
+		<clipnode clip="SH1_3" id="34" name="SH1_3"/>
+		<clipnode clip="SH2" id="35" name="SH2"/>
+		<clipnode clip="lucky_1" id="36" name="lucky_1"/>
+		<clipnode clip="lucky_2" id="37" name="lucky_2"/>
+		<clipnode clip="lucky_3" id="38" name="lucky_3"/>
+		<clipnode clip="Btakesgun_1" id="39" name="Btakesgun_1"/>
+		<clipnode clip="Btakesgun_2" id="40" name="Btakesgun_2"/>
+		<!--  these clips cut after Jake puts gun on table, no good :( -->
+		<clipnode clip="BshootsB_1" id="41" name="BshootsB_1"/>
+		<clipnode clip="BshootsB_2" id="42" name="BshootsB_2"/>
+		<clipnode clip="Bdies_1" id="43" name="Bdies_1"/>
+		<clipnode clip="Bdies_2" id="44" name="Bdies_2"/>
+		<clipnode clip="Bdies_3" id="45" name="Bdies_3"/>
+		<clipnode clip="Bdies_4" id="46" name="Bdies_4"/>
+		<clipnode clip="Bdies_5" id="47" name="Bdies_5"/>
+		<clipnode clip="FY" id="48" name="FY"/>
+		<clipnode clip="SH2_1" id="49" name="SH2_1"/>
+		<clipnode clip="SH2_2" id="50" name="SH2_2"/>
+		<clipnode clip="SH2_3" id="51" name="SH2_3"/>
+		<clipnode clip="leantowait" id="52" name="leantowait" />
+		<clipnode clip="SH3" id="53" name="SH3" />
+	</stage>
+	
+	<stage name="player" clipxml = "jake_clips_FINAL.xml">
+		<clipnode id = "1" name = "player_blank" clip = "eyes_blank" />
+		<clipnode id = "2" name = "player_blank_patch" clip = "player_blank_patch" />
+		<clipnode id = "3" name = "player_handin" clip = "player_handin" />
+		<clipnode id = "4" name = "player_handout" clip = "player_handout" />
+	</stage>
+	
+	<stage name="eyes" clipxml = "jake_clips_FINAL.xml">
+		<clipnode id = "1" name = "eyes_blank" clip = "eyes_blank" />
+		<clipnode id = "2" name = "eyes_closing" clip = "eyes_closing" />
+		<clipnode id = "3" name = "eyes_openning" clip = "eyes_openning" />
+		<clipnode id = "4" name = "eyes_blink" clip = "eyes_blink" />
+	</stage>
+	
+	<stage name="fade" clipxml = "jake_clips_FINAL.xml">
+		<clipnode id = "4" name = "fade_blank" clip = "eyes_blank" />
+		<clipnode id = "2" name = "fade_fadein" clip = "fadein" />
+		<clipnode id = "3" name = "fade_fadeout" clip = "fadeout" />
+		<clipnode id = "1" name = "fade_black" clip = "eyes_black" />
+	</stage>
+</xml>

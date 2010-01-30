@@ -25,6 +25,8 @@ class Sound:
         if filename not in self.soundList:
             self.loadSound(filename)
         return self.soundList[filename]
+    def isPlaying(self,filename):
+        return self.getSound(filename).get_num_channels()
     def loadSound(self,filename):
         """loads sound filename and puts it on the flywheel
         

@@ -1,5 +1,14 @@
 TODO 
 
+for submission:
+fix continue bug
+fix image shifting (incorporate into engine)
+add dramatic pause before self dying
+add wait clips
+add credit screen
+add title screen
+add joystick support
+
 for 1/26/09 if not today:
 
 crop out all clips, leave extra space. DONE for jake
@@ -15,9 +24,9 @@ mess around with filter for Jake and Nate till you find something nice.
 start converting video and put in
 
 new features:
-make clicky noise and gunshot
+make clicky noise and gunshot *DO IT
 DONE make fadein screen
-DONEput fadeinscreen into game, make fadeout
+DONE put fadeinscreen into game, make fadeout
 spiffy title screen and logo
 spiffy continue screen, add blank stuff before continue screen
 spiffy game over screen

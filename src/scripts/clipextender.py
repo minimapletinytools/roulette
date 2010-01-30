@@ -9,13 +9,22 @@ import shutil
 #frames = 100
 #reverse = False
 
-folder = "/home/user/Desktop/Link to stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/leantowait/"
-prefix = "leantowait"
+#folder = "/home/user/Desktop/Link to stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/leantowait/"
+#prefix = "leantowait"
+#suffix = ".png"
+#rstart = 12
+#rend = 19
+#outputstart = 19
+#frames = 40
+#reverse = True
+
+folder = "/home/user/Desktop/Link to stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/Bdies5/"
+prefix = "Bdies5"
 suffix = ".png"
-rstart = 12
-rend = 19
-outputstart = 19
-frames = 40
+rstart = 39
+rend = 49
+outputstart = 49
+frames = 200
 reverse = True
 
 l = range(rstart,rend)
