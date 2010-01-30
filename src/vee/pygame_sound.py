@@ -47,4 +47,5 @@ class Sound:
             print "stopped",filename
             self.soundList[filename].stop()
     def stopAll(self):
+        print "stopping all sound"
         pygame.mixer.stop()

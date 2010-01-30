@@ -10,7 +10,7 @@ class roulette(win.Win):
     def __init__(self,*args, **kwargs):
         #win.Win.__init__(self,width=320,height=240,*args, **kwargs)
         win.Win.__init__(self,*args, **kwargs)
-        self.cont = controller.Controller(minidom.parse(resource.file("graph.xml")).documentElement)
+        self.cont = controller.Controller(minidom.parse(resource.file("jake_graph_FINAL.xml")).documentElement)
         self.sub = subtitles.Subtitles()
         #setup the drawer module with current window vars. Since we have to do this, it might be better if we make drawer a singleton
         drawer.setVars(self)

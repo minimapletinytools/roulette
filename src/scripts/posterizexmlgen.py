@@ -6,7 +6,7 @@ import xml.dom.minidom
 import os
 
 extension = "mov"
-directory = "/media/windows/stuff/kitchen/faucet01/posterizeme/videos"
+directory = "/media/OneTouch4/mystuff/ROULETTE_FINAL/JAKE/mov_no_audio"
 videofolder = "videos/jake_FINAL/"
 outputfolder = "jake_FINAL/clips/"
 soundfolder = "jake_FINAL/sound/"
@@ -23,7 +23,7 @@ def stripext(fn):
     x = len(fn)
     for i in range(1,x+1):
         if fn[x-i] == '.':
-            return fn[0:i]
+            return fn[0:x-i]
 def getext(fn):
     x = len(fn)
     for i in range(1,x+1):
@@ -34,7 +34,7 @@ for e in os.listdir(directory):
     if getext(e) != extension:
         continue
     f = stripext(e)
-    y = xml.dom.minidom.parseString("<clip />").childNodes[0]
+    y = xml.dom.minidom.parseString("<video />").childNodes[0]
     attr = dict()
     attr["name"] = f
     attr["videoname"] = videofolder+e
@@ -51,4 +51,5 @@ for e in os.listdir(directory):
     attr["frames"] = frames
     for i in attr.keys():
         y.setAttribute(i,str(attr[i]))
+
     print y.toprettyxml()

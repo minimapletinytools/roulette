@@ -32,7 +32,7 @@
 		blinking
 		fade
 	</vars>
-	<stage name="brandon" clipxml = "clips.xml">
+	<stage name="brandon" clipxml = "jake_testing_clips.xml">
 		<clipnode clip="start" id="1" name="start"/>
 		<clipnode clip="intro" id="2" name="intro"/>
 		<clipnode clip="wait" id="3" name="wait"/>
@@ -71,23 +71,24 @@
 		<clipnode clip="lucky_1" id="36" name="lucky_1"/>
 		<clipnode clip="lucky_2" id="37" name="lucky_2"/>
 		<clipnode clip="lucky_3" id="38" name="lucky_3"/>
+		<clipnode clip="Btakesgun" id="39" name="Btakesgun"/>
 	</stage>
 	
-	<stage name="player" clipxml = "clips.xml">
+	<stage name="player" clipxml = "jake_testing_clips.xml">
 		<clipnode id = "1" name = "player_blank" clip = "eyes_blank" />
 		<clipnode id = "2" name = "player_blank_patch" clip = "player_blank_patch" />
 		<clipnode id = "3" name = "player_handin" clip = "player_handin" />
 		<clipnode id = "4" name = "player_handout" clip = "player_handout" />
 	</stage>
 	
-	<stage name="eyes" clipxml = "clips.xml">
+	<stage name="eyes" clipxml = "jake_testing_clips.xml">
 		<clipnode id = "1" name = "eyes_blank" clip = "eyes_blank" />
 		<clipnode id = "2" name = "eyes_closing" clip = "eyes_closing" />
 		<clipnode id = "3" name = "eyes_openning" clip = "eyes_openning" />
 		<clipnode id = "4" name = "eyes_blink" clip = "eyes_blink" />
 	</stage>
 	
-	<stage name="fade" clipxml = "clips.xml">
+	<stage name="fade" clipxml = "jake_testing_clips.xml">
 		<clipnode id = "4" name = "fade_blank" clip = "eyes_blank" />
 		<clipnode id = "2" name = "fade_fadein" clip = "fadein" />
 		<clipnode id = "3" name = "fade_fadeout" clip = "fadeout" />

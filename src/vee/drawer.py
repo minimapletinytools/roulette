@@ -36,4 +36,4 @@ def draw(img,ox = 0, oy = 0):
         glTexParameteri(img.texture.target,GL_TEXTURE_MAG_FILTER, GL_NEAREST)
         glTexParameteri(img.texture.target,GL_TEXTURE_MIN_FILTER, GL_NEAREST)
         w,h = largestrect(img.width,img.height,width-ox,height-oy)
-        img.blit((width-w)/2,(height-h)/2,0,w,h)
+        img.blit((width-w)/2,(height-h)/2-50,0,w,h)
