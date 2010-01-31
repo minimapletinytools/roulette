@@ -89,6 +89,14 @@
 		<clipnode clip="leantowait" id="52" name="leantowait" />
 		<clipnode clip="SH3" id="53" name="SH3" />
 		<clipnode clip="truecontinue" id="54" name="truecontinue" />
+		
+		<!-- stupid -->
+		<clipnode clip="bandaid" id="55" name="bandaid" />
+		<clipnode clip="funny_lucky" id="56" name="funny_lucky" />
+		<clipnode clip="crowdgoeswild" id="57" name="crowdgoeswild" />
+		<clipnode clip="sideways_1" id="58" name="sideways_1" />
+		<clipnode clip="sideways_2" id="59" name="sideways_2" />
+		<clipnode clip="blowgun" id="60" name="blowgun" />
 	</stage>
 	
 	<stage name="player" clipxml = "jake_clips_FINAL.xml">

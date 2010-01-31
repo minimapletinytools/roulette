@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<clips>
-<clip name="station" type = "ImageClip" sound = "station.wav" videoname="station.mov" durinms="60" frames = "71" duration = "4.26" folder="station/" prefix="station" width="320" height="240" />
-<clip name="station2" type = "ImageClip" sound = "station.wav" videoname="station.mov" durinms="60" frames = "71" folder="station/" prefix="station" width="320" height="240" />
-<clip name="sister" type = "ImageClip" sound = "station.wav" videoname="movie.avi" durinms="120" frames = "70" duration = "8.40" folder="sister/"  prefix="sister" width="320" height="240" />
-</clips>
- 

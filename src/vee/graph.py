@@ -51,7 +51,7 @@ def init_graph(state):
                         ("FH1",u"FH1_1"),
                         ("FH1",u"FH1_2"),
                         ("FH1",u"FH1_3"),
-                        (("FS","FH2"),u"FH2_1"),    #this is kind of backwards, but we want to pick this and NOT fs
+                        ("FH2",u"FH2_1"),
                         ("FH2",u"FSFH2_2"),
                         ("FH2",u"FSFH2_3"),
                         ("FY",u"FY_1"),
@@ -94,8 +94,8 @@ def blink(state,clip):
 def youlose(state,clip):
     glob.sound.play("jake_FINAL/sound/garand_shoot_fire.wav")
     return "continue"
-def stupid(state,clip):
-    return not random.randint(0,100)
+def stupid(state,clip,chance = 10):
+    return not bool(random.randint(0,chance))
 def graph_default(state,clip):
     return -1
 def graph_start(state,clip):
@@ -110,6 +110,8 @@ def graph_wait(state,clip):
         return youlose(state,clip)
     if state["player_shoot_state"] == 2:
         state["player_shoot_state"] = 0
+        if stupid(state,clip):
+            return random.choice(["funny_lucky","crowdgoeswild"])
         return random.choice(getSubset(state["visited"],["lucky",]))[1]
     if state["turn"] == "B" and state["player_shoot_state"] == 0:
         return random.choice(getSubset(state["visited"],["Btakesgun",]))[1]
@@ -120,8 +122,10 @@ def graph_wait(state,clip):
                 if state["FH_state"] == 0:
                     return random.choice(getSubset(state["visited"],["FH1",]))[1]
                 elif state["FH_state"] == 1:
-                    if state["first_shot"]: return random.choice(getSubset(state["visited"],["FH2",]))[1]
-                    else: return random.choice(getSubset(state["visited"],["FS",]))[1]
+                    print "FS STTAEOUHO", state["first_shot"]
+                    if not state["first_shot"]:
+                        return random.choice(getSubset(state["visited"],["SH1",]))[1]      
+                    return random.choice(getSubset(state["visited"],["FH2",]))[1]
                 elif state["FH_state"] == 2:
                     state["turn"] = "B" 
                     state["first_shot"] = False
@@ -151,6 +155,9 @@ def graph_waitlean(state,clip):
             if state["player_shoot_state"] == 0:
                 state["turn"] = "B" 
                 state["SH_state"] = 0
+                if stupid(state,clip,500) and state["shots_fired"] < 5:
+                    state["shots_fired"] += 1
+                    return random.choice(["sideways_1","sideways_2"])
                 return "SH3"
             return "waitlean"
     else: return "-1"
@@ -246,7 +253,6 @@ def graph_BshootsY(state,clip):
     else: return "-1"
     
 def graph_FY(state,clip):
-    print clip.grabFrameNumber()
     blink(state,clip)
     if clip.isFinished():
         return "BshootsB_cut"
@@ -254,9 +260,7 @@ def graph_FY(state,clip):
 def FY_generic(state,clip,name):
     blink(state,clip)
     if clip.isFinished():
-        #remove the element because we've been there already
         removeElementFromSet(state["visited"],name) 
-        #advance state
         return "BprepareshootB"
     else: return "-1"
 def graph_FY_1(state,clip):
@@ -306,6 +310,7 @@ def graph_BshootsB_1(state,clip):
 def graph_BshootsB_2(state,clip):
     return BshootsB_generic(state,clip,"BshootsB_2")
 def graph_BshootsB_cut(state,clip):
+    blink(state,clip)
     if clip.isFinished():
         state["shots_fired"] += 1
         if random.randint(0,5) <= state["shots_fired"]-1:
@@ -314,6 +319,7 @@ def graph_BshootsB_cut(state,clip):
         else:
             state["turn"] = "Y"
             glob.sound.play("jake_FINAL/sound/click.aiff")
+            if stupid(state,clip): return "blowgun"
             return random.choice(getSubset(state["visited"],["YT",]))[1]
     else: return "-1"
 def Bdies_generic(state,clip,name):
@@ -374,10 +380,9 @@ def graph_truecontinue(state,clip):
     if clip.isFinished(): return "youlose"
     else: return "-1"
 def graph_continue(state,clip):
-    #percent chance change to bandaid clip
     #TODO play some music and shit
     if clip.isFinished():
-        
+        if(stupid(state,clip)): return "bandaid"
         return "truecontinue"
     else: return "-1"
 def graph_youlose(state,clip):
@@ -436,8 +441,7 @@ def lucky_generic(state,clip,name):
     blink(state,clip)
     if clip.isFinished():
         removeElementFromSet(state["visited"],name) 
-        #or return wait
-        return random.choice(getSubset(state["visited"],["Btakesgun",]))[1]
+        return "wait" #random.choice(getSubset(state["visited"],["Btakesgun",]))[1]
     else: return "-1"
 def graph_lucky_1(state,clip):
     return lucky_generic(state,clip,"lucky_1")
@@ -445,8 +449,38 @@ def graph_lucky_2(state,clip):
     return lucky_generic(state,clip,"lucky_2")
 def graph_lucky_3(state,clip):
     return lucky_generic(state,clip,"lucky_3")
-
+#stupid clips
+def graph_bandaid(state,clip):
+    if clip.isFinished():
+        return "truecontinue"
+    else: return -1
+def graph_funny_lucky(state,clip):
+    blink(state,clip)
+    if clip.isFinished():
+        return random.choice(getSubset(state["visited"],["Btakesgun",]))[1]
+    else: return -1
+def graph_crowdgoeswild(state,clip):
+    blink(state,clip)
+    if clip.isFinished():
+        return "wait"
+    else: return -1
     
+def graph_sideways_1(state,clip):
+    blink(state,clip)
+    if clip.isFinished():
+        return "wait"
+    else: return -1
+def graph_sideways_2(state,clip):
+    blink(state,clip)
+    if clip.isFinished():
+        return "wait"
+    else: return -1
+def graph_blowgun(state,clip):
+    blink(state,clip)
+    if clip.isFinished():
+        state["turn"] = "Y"
+        return "wait"
+    else: return -1
     
 #player functions
 def graph_player_blank(state,clip):
@@ -465,20 +499,20 @@ def graph_player_blank_patch(state,clip):
     if not state["press"] and not state["player_shoot_state"] == 3:
         state["player_shoot_state"] = 0
         return "player_handout" 
-    elif state["press"] and time.time() - state["time_pressed"] > 4:
+    elif state["press"] and time.time() - state["time_pressed"] > 4.5:
         state["press"] = False
-        print "KAPOW, Y shoots Y"
         state["turn"] = "B"
         if random.randint(0,5) <= state["shots_fired"]-1:
             state["lose"] = True
             return "player_blank"
         else:
-            state["first_hesitate"]
+            state["FH_state"] = 0
+            #state["first_hesitate"]
             state["first_shot"] = False
             state["player_shoot_state"] = 3
             glob.sound.play("jake_FINAL/sound/click.aiff")
             return "-1"
-    elif state["player_shoot_state"] == 3 and clip.getTime() > 4:
+    elif state["player_shoot_state"] == 3 and clip.getTime() > 4.5:
         state["player_shoot_state"] = 2
         return "player_handout"
     return "-1"
