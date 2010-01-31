@@ -89,9 +89,9 @@
 	</stage>
 	
 	<stage name="fade" clipxml = "jake_testing_clips.xml">
-		<clipnode id = "4" name = "fade_blank" clip = "eyes_blank" />
+		<clipnode id = "1" name = "fade_blank" clip = "eyes_blank" />
 		<clipnode id = "2" name = "fade_fadein" clip = "fadein" />
 		<clipnode id = "3" name = "fade_fadeout" clip = "fadeout" />
-		<clipnode id = "1" name = "fade_black" clip = "eyes_black" />
+		<clipnode id = "4" name = "fade_black" clip = "eyes_black" />
 	</stage>
 </xml>

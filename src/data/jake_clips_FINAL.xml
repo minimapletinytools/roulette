@@ -2,40 +2,38 @@
 <clips>
 	<clip duration="2.55319727891" durinms="10000" folder="words/" frames="1" name="start" prefix="blamocreepyblue" sound="start.wav" freeze = "true" type="CachedImageClip"/>
 	
-	<clip duration="3.66875283447" durinms="10000" folder="words/" frames="1" name="FH3_1" prefix="FH3_1" sound="FH3_1.wav" type="CachedImageClip"/>
-	<clip duration="5.90947845805" durinms="10000" folder="words/" frames="1" name="FH3_2" prefix="FH3_2" sound="FH3_2.wav" type="CachedImageClip"/>
-	<clip duration="3.41333333333" durinms="10000" folder="words/" frames="1" name="FH3_3" prefix="FH3_3" sound="FH3_3.wav" type="CachedImageClip"/>
-	<clip duration="5.75854875283" durinms="10000" folder="words/" frames="1" name="Bgoesfirst" prefix="Bgoesfirst" sound="Bgoesfirst.wav" type="CachedImageClip"/>
-	<clip duration="2.20589569161" durinms="10000" folder="words/" frames="1" name="FH4" prefix="FH4" sound="FH4.wav" type="CachedImageClip"/>
-	<clip duration="3.73841269841" durinms="10000" folder="words/" frames="1" name="BshootsY" prefix="BshootsY" sound="BshootsY.wav" type="CachedImageClip"/>
-	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="fuckyou" prefix="fuckyou" sound="fuckyou.wav" type="CachedImageClip"/>
-	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_1" prefix="FY_1" sound="fuckyou.wav" type="CachedImageClip"/>
-	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_2" prefix="FY_2" sound="fuckyou.wav" type="CachedImageClip"/>
-	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_3" prefix="FY_3" sound="fuckyou.wav" type="CachedImageClip"/>
-	<clip duration="4.13315192744" durinms="10000" folder="words/" frames="1" name="BprepareshootB" prefix="BprepareshootB" sound="BprepareshootB.wav" type="CachedImageClip"/>
+	<clip duration="3.66875283447" durinms="10000" folder="words/" frames="1" name="FH3_1" prefix="FH3_1" sound="FH3_1.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="5.90947845805" durinms="10000" folder="words/" frames="1" name="FH3_2" prefix="FH3_2" sound="FH3_2.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="3.41333333333" durinms="10000" folder="words/" frames="1" name="FH3_3" prefix="FH3_3" sound="FH3_3.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="5.75854875283" durinms="10000" folder="words/" frames="1" name="Bgoesfirst" prefix="Bgoesfirst" sound="Bgoesfirst.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="2.20589569161" durinms="10000" folder="words/" frames="1" name="FH4" prefix="FH4" sound="FH4.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="3.73841269841" durinms="10000" folder="words/" frames="1" name="BshootsY" prefix="BshootsY" sound="BshootsY.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="fuckyou" prefix="fuckyou" sound="fuckyou.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_1" prefix="FY_1" sound="fuckyou.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_2" prefix="FY_2" sound="fuckyou.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="4.62077097506" durinms="10000" folder="words/" frames="1" name="FY_3" prefix="FY_3" sound="fuckyou.wav" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="4.13315192744" durinms="10000" folder="words/" frames="1" name="BprepareshootB" prefix="BprepareshootB" sound="BprepareshootB.wav" type="CachedImageClip" py="-0.10" px="0"/>
 	
-	<clip duration="1.95047619048" durinms="10000" folder="words/" frames="1" name="youwin" prefix="youwin" sound="youwin.wav" type="CachedImageClip"/>
+	<clip duration="1.95047619048" durinms="10000" folder="words/" frames="1" name="youwin" prefix="youwin" sound="youwin.wav" type="CachedImageClip" py="0" px="0"/>
 	
-	<clip duration="14.7911111111" durinms="10000" folder="words/" frames="1" name="continue" prefix="continue" sound="continue.wav" type="CachedImageClip"/>
-	<clip duration="2.14784580499" durinms="10000" folder="words/" frames="1" name="youlose" prefix="youlose" sound="youlose.wav" type="CachedImageClip"/>
+	<clip duration="14.7911111111" durinms="10000" folder="words/" frames="1" name="truecontinue" prefix="continue" sound="continue.wav" type="CachedImageClip" py="0" px="0"/>
+	<clip duration="5" durinms="10000" folder="jake_FINAL/clips/continue/" frames="1" name="continue" prefix="continue" sound="" type="CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="2.14784580499" durinms="10000" folder="words/" frames="1" name="youlose" prefix="youlose" sound="youlose.wav" type="CachedImageClip" py="-0.10" px="0"/>
 
-	<clip duration="2.15945578231" durinms="10000" folder="words/" frames="1" name="SH2" prefix="SH2" sound="SH2.wav" type="CachedImageClip"/>
+	<clip duration="2.15945578231" durinms="10000" folder="words/" frames="1" name="SH2" prefix="SH2" sound="SH2.wav" type="CachedImageClip" py="-0.10" px="0"/>
 	
 	
+		
 	
 	
-	
-	
-	
-	
-	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies5/" frames="255" height="240" name="Bdies_5" prefix="Bdies5" sound="jake_FINAL/sound/Bdies5.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bdies5.mov" width="320"/>
-	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies2/" frames="251" height="240" name="Bdies_2" prefix="Bdies2" sound="jake_FINAL/sound/Bdies2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bdies2.mov" width="320"/>
-	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies1/" frames="250" height="240" name="Bdies_1" prefix="Bdies1" sound="jake_FINAL/sound/Bdies1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bdies1.mov" width="320"/>
-	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies3/" frames="255" height="240" name="Bdies_3" prefix="Bdies3" sound="jake_FINAL/sound/Bdies3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bdies3.mov" width="320"/>
-	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies4/" frames="257" height="240" name="Bdies_4" prefix="Bdies4" sound="jake_FINAL/sound/Bdies4.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bdies4.mov" width="320"/>
-	<clip duration="7.2900004" durinms="90" folder="jake_FINAL/clips/YT_1/" frames="81" height="240" name="YT_1" prefix="YT_1" sound="jake_FINAL/sound/YT_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/YT_1.mov" width="320"/>
-	<clip duration="6.03" durinms="90" folder="jake_FINAL/clips/YT_2/" frames="67" height="240" name="YT_2" prefix="YT_2" sound="jake_FINAL/sound/YT_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/YT_2.mov" width="320"/>
-	<clip duration="5.2200003" durinms="90" folder="jake_FINAL/clips/YT_3/" frames="58" height="240" name="YT_3" prefix="YT_3" sound="jake_FINAL/sound/YT_3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/YT_3.mov" width="320"/>
+	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies5/" frames="255" height="240" name="Bdies_5" prefix="Bdies5" sound="jake_FINAL/sound/Bdies5.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bdies5.mov" width="320"/>
+	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies2/" frames="251" height="240" name="Bdies_2" prefix="Bdies2" sound="jake_FINAL/sound/Bdies2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bdies2.mov" width="320"/>
+	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies1/" frames="250" height="240" name="Bdies_1" prefix="Bdies1" sound="jake_FINAL/sound/Bdies1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bdies1.mov" width="320"/>
+	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies3/" frames="255" height="240" name="Bdies_3" prefix="Bdies3" sound="jake_FINAL/sound/Bdies3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bdies3.mov" width="320"/>
+	<clip duration="20" durinms="90" folder="jake_FINAL/clips/Bdies4/" frames="257" height="240" name="Bdies_4" prefix="Bdies4" sound="jake_FINAL/sound/Bdies4.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bdies4.mov" width="320"/>
+	<clip duration="7.2900004" durinms="90" folder="jake_FINAL/clips/YT_1/" frames="81" height="240" name="YT_1" prefix="YT_1" sound="jake_FINAL/sound/YT_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/YT_1.mov" width="320"/>
+	<clip duration="6.03" durinms="90" folder="jake_FINAL/clips/YT_2/" frames="67" height="240" name="YT_2" prefix="YT_2" sound="jake_FINAL/sound/YT_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/YT_2.mov" width="320"/>
+	<clip duration="5.2200003" durinms="90" folder="jake_FINAL/clips/YT_3/" frames="58" height="240" name="YT_3" prefix="YT_3" sound="jake_FINAL/sound/YT_3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/YT_3.mov" width="320"/>
 	
 	
 	
@@ -49,31 +47,27 @@
 	
 	
 	
-	<clip duration="10.71" durinms="90" folder="jake_FINAL/clips/funny_lucky/" frames="119" height="240" name="funny_lucky" prefix="funny_lucky" sound="jake_FINAL/sound/funny_lucky.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/funny_lucky.mov" width="320"/>
+	<clip duration="10.71" durinms="90" folder="jake_FINAL/clips/funny_lucky/" frames="119" height="240" name="funny_lucky" prefix="funny_lucky" sound="jake_FINAL/sound/funny_lucky.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/funny_lucky.mov" width="320"/>
 	
 	
 	
-	<clip duration="8.37" durinms="90" folder="jake_FINAL/clips/FH2_1/" frames="93" height="240" name="FH2_1" prefix="FH2_1" sound="jake_FINAL/sound/FH2_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH2_1.mov" width="320"/>
+	<clip duration="8.37" durinms="90" folder="jake_FINAL/clips/FH2_1/" frames="93" height="240" name="FH2_1" prefix="FH2_1" sound="jake_FINAL/sound/FH2_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH2_1.mov" width="320"/>
 	
 	
 	
-	<clip duration="9.9" durinms="90" folder="jake_FINAL/clips/waitlean/" frames="110" height="240" name="waitlean" prefix="waitlean" sound="" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/waitlean.mov" width="320"/>
+	<clip duration="6" durinms="90" folder="jake_FINAL/clips/waitlean/" frames="110" height="240" name="waitlean" prefix="waitlean" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/waitlean.mov" width="320"/>
 	
-	<clip duration="9.63" durinms="90" folder="jake_FINAL/clips/sideways_2/" frames="107" height="240" name="sideways_2" prefix="sideways_2" sound="jake_FINAL/sound/sideways_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/sideways_2.mov" width="320"/>
-	
-	
-	
-	
-	
-	
-	
-	<clip duration="8.46" durinms="90" folder="jake_FINAL/clips/bandaid/" frames="94" height="240" name="bandaid" prefix="bandaid" sound="jake_FINAL/sound/bandaid.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/bandaid.mov" width="320"/>
-	
-	<clip duration="8.46" durinms="90" folder="jake_FINAL/clips/crowdgoeswild/" frames="94" height="240" name="crowdgoeswild" prefix="crowdgoeswild" sound="jake_FINAL/sound/crowdgoeswild.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/crowdgoeswild.mov" width="320"/>
+	<clip duration="9.63" durinms="90" folder="jake_FINAL/clips/sideways_2/" frames="107" height="240" name="sideways_2" prefix="sideways_2" sound="jake_FINAL/sound/sideways_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/sideways_2.mov" width="320"/>
 	
 	
 	
 	
+	
+	
+	
+	<clip duration="8.46" durinms="90" folder="jake_FINAL/clips/bandaid/" frames="94" height="240" name="bandaid" prefix="bandaid" sound="jake_FINAL/sound/bandaid.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/bandaid.mov" width="320"/>
+	
+	<clip duration="8.46" durinms="90" folder="jake_FINAL/clips/crowdgoeswild/" frames="94" height="240" name="crowdgoeswild" prefix="crowdgoeswild" sound="jake_FINAL/sound/crowdgoeswild.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/crowdgoeswild.mov" width="320"/>
 	
 	
 	
@@ -92,71 +86,76 @@
 	
 	
 	
-	<clip duration="0.90000004" durinms="90" folder="jake_FINAL/clips/tolean/" frames="10" height="240" name="tolean" prefix="tolean" sound="" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/tolean.mov" width="320"/>
-	
-	
-	
-	<clip duration="7.11" durinms="90" folder="jake_FINAL/clips/blowgun/" frames="79" height="240" name="blowgun" prefix="blowgun" sound="jake_FINAL/sound/blowgun.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/blowgun.mov" width="320"/>
 	
 	
 	
 	
-	<clip duration="4.86" durinms="90" folder="jake_FINAL/clips/SH2_1/" frames="54" height="240" name="SH2_1" prefix="SH2_1" sound="jake_FINAL/sound/SH2_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH2_1.mov" width="320"/>
-	<clip duration="7.2900004" durinms="90" folder="jake_FINAL/clips/SH2_2/" frames="81" height="240" name="SH2_2" prefix="SH2_2" sound="jake_FINAL/sound/SH2_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH2_2.mov" width="320"/>
-	<clip duration="5.4900002" durinms="90" folder="jake_FINAL/clips/SH2_3/" frames="61" height="240" name="SH2_3" prefix="SH2_3" sound="jake_FINAL/sound/SH2_3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH2_3.mov" width="320"/>
+	<clip duration="0.90000004" durinms="90" folder="jake_FINAL/clips/tolean/" frames="10" height="240" name="tolean" prefix="tolean" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/tolean.mov" width="320"/>
+	
+	
+	
+	<clip duration="7.11" durinms="90" folder="jake_FINAL/clips/blowgun/" frames="79" height="240" name="blowgun" prefix="blowgun" sound="jake_FINAL/sound/blowgun.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/blowgun.mov" width="320"/>
+	
+	
+	
+	
+	<clip duration="4.86" durinms="90" folder="jake_FINAL/clips/SH2_1/" frames="54" height="240" name="SH2_1" prefix="SH2_1" sound="jake_FINAL/sound/SH2_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH2_1.mov" width="320"/>
+	<clip duration="7.2900004" durinms="90" folder="jake_FINAL/clips/SH2_2/" frames="81" height="240" name="SH2_2" prefix="SH2_2" sound="jake_FINAL/sound/SH2_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH2_2.mov" width="320"/>
+	<clip duration="5.4900002" durinms="90" folder="jake_FINAL/clips/SH2_3/" frames="61" height="240" name="SH2_3" prefix="SH2_3" sound="jake_FINAL/sound/SH2_3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH2_3.mov" width="320"/>
 	<!-- should be 22 ish -->
-	<clip duration="11" durinms="90" folder="jake_FINAL/clips/FY/" frames="246" height="240" name="FY" prefix="FY" sound="jake_FINAL/sound/FY.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FY.mov" width="320"/>
+	<clip duration="11" durinms="90" folder="jake_FINAL/clips/FY/" frames="246" height="240" name="FY" prefix="FY" sound="jake_FINAL/sound/FY.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FY.mov" width="320"/>
 	
-	<clip duration="9.27" durinms="90" folder="jake_FINAL/clips/sideways_1/" frames="103" height="240" name="sideways_1" prefix="sideways_1" sound="jake_FINAL/sound/sideways_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/sideways_1.mov" width="320"/>
+	<clip duration="9.27" durinms="90" folder="jake_FINAL/clips/sideways_1/" frames="103" height="240" name="sideways_1" prefix="sideways_1" sound="jake_FINAL/sound/sideways_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/sideways_1.mov" width="320"/>
 	
 	
 	
-	<clip duration="10.17" durinms="90" folder="jake_FINAL/clips/intro/" frames="113" height="240" name="intro" prefix="intro" sound="jake_FINAL/sound/intro.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/intro.mov" width="320"/>
-	<clip duration="6.3900003" durinms="90" folder="jake_FINAL/clips/wait_01/" frames="71" height="240" name="wait" prefix="wait_01" sound="" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/wait_01.mov" width="320"/>
-	<clip duration="3.6000001" durinms="90" folder="jake_FINAL/clips/lucky2/" frames="40" height="240" name="lucky_2" prefix="lucky2" sound="jake_FINAL/sound/lucky2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/lucky2.mov" width="320"/>
-	<clip duration="6.21" durinms="90" folder="jake_FINAL/clips/lucky1/" frames="69" height="240" name="lucky_1" prefix="lucky1" sound="jake_FINAL/sound/lucky1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/lucky1.mov" width="320"/>
-	<clip duration="8.190001" durinms="90" folder="jake_FINAL/clips/lucky3/" frames="91" height="240" name="lucky_3" prefix="lucky3" sound="jake_FINAL/sound/lucky3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/lucky3.mov" width="320"/>
-	<clip duration="2.88" durinms="90" folder="jake_FINAL/clips/SH1_1/" frames="32" height="240" name="SH1_1" prefix="SH1_1" sound="jake_FINAL/sound/SH1_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH1_1.mov" width="320"/>
-	<clip duration="2.88" durinms="90" folder="jake_FINAL/clips/SH1_2/" frames="32" height="240" name="SH1_2" prefix="SH1_2" sound="jake_FINAL/sound/SH1_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH1_2.mov" width="320"/>
-	<clip duration="3.5100002" durinms="90" folder="jake_FINAL/clips/SH1_3/" frames="39" height="240" name="SH1_3" prefix="SH1_3" sound="jake_FINAL/sound/SH1_3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH1_3.mov" width="320"/>
-	<clip duration="10.17" durinms="90" folder="jake_FINAL/clips/FH1_1/" frames="113" height="240" name="FH1_1" prefix="FH1_1" sound="jake_FINAL/sound/FH1_1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH1_1.mov" width="320"/>
-	<clip duration="3.96" durinms="90" folder="jake_FINAL/clips/FH1_2/" frames="44" height="240" name="FH1_2" prefix="FH1_2" sound="jake_FINAL/sound/FH1_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH1_2.mov" width="320"/>
-	<clip duration="3.7800002" durinms="90" folder="jake_FINAL/clips/FH1_3/" frames="42" height="240" name="FH1_3" prefix="FH1_3" sound="jake_FINAL/sound/FH1_3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH1_3.mov" width="320"/>
-	<clip duration="7.2000003" durinms="90" folder="jake_FINAL/clips/FH2_2/" frames="80" height="240" name="FSFH2_2" prefix="FH2_2" sound="jake_FINAL/sound/FH2_2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH2_2.mov" width="320"/>
-	<clip duration="5.2200003" durinms="90" folder="jake_FINAL/clips/FH2_3/" frames="58" height="240" name="FSFH2_3" prefix="FH2_3" sound="jake_FINAL/sound/FH2_3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/FH2_3.mov" width="320"/>
-	<clip duration="15.570001" durinms="90" folder="jake_FINAL/clips/DH1/" frames="173" height="240" name="DH_1" prefix="DH1" sound="jake_FINAL/sound/DH1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/DH1.mov" width="320"/>
-	<clip duration="13.77" durinms="90" folder="jake_FINAL/clips/DH2/" frames="153" height="240" name="DH_2" prefix="DH2" sound="jake_FINAL/sound/DH2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/DH2.mov" width="320"/>
-	<clip duration="15.93" durinms="90" folder="jake_FINAL/clips/DH3/" frames="177" height="240" name="DH_3" prefix="DH3" sound="jake_FINAL/sound/DH3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/DH3.mov" width="320"/>
-	<clip duration="7.0200005" durinms="90" folder="jake_FINAL/clips/Bgoesfirst1/" frames="78" height="240" name="Bgoesfirst_1" prefix="Bgoesfirst1" sound="jake_FINAL/sound/Bgoesfirst1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bgoesfirst1.mov" width="320"/>
-	<clip duration="2.7" durinms="90" folder="jake_FINAL/clips/Bgoesfirst2/" frames="30" height="240" name="Bgoesfirst_2" prefix="Bgoesfirst2" sound="jake_FINAL/sound/Bgoesfirst2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bgoesfirst2.mov" width="320"/>
-	<clip duration="4.59" durinms="90" folder="jake_FINAL/clips/Bgoesfirst3/" frames="51" height="240" name="Bgoesfirst_3" prefix="Bgoesfirst3" sound="jake_FINAL/sound/Bgoesfirst3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Bgoesfirst3.mov" width="320"/>
-	<clip duration="3.8700001" durinms="90" folder="jake_FINAL/clips/Btakesgun1/" frames="43" height="240" name="Btakesgun_1" prefix="Btakesgun1" sound="jake_FINAL/sound/Btakesgun1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Btakesgun1.mov" width="320"/>
-	<clip duration="5.5800004" durinms="90" folder="jake_FINAL/clips/Btakesgun2/" frames="62" height="240" name="Btakesgun_2" prefix="Btakesgun2" sound="jake_FINAL/sound/Btakesgun2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/Btakesgun2.mov" width="320"/>
-	<clip duration="18.900002" durinms="90" folder="jake_FINAL/clips/BshootsB1/" frames="210" height="240" name="BshootsB_1" prefix="BshootsB1" sound="jake_FINAL/sound/BshootsB1.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/BshootsB1.mov" width="320"/>
-	<clip duration="16.74" durinms="90" folder="jake_FINAL/clips/BshootsB2/" frames="186" height="240" name="BshootsB_2" prefix="BshootsB2" sound="jake_FINAL/sound/BshootsB2.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/BshootsB2.mov" width="320"/>
-	<clip duration="10.35" durinms="90" folder="jake_FINAL/clips/BshootsB_cut/" frames="115" height="240" name="BshootsB_cut" prefix="BshootsB_cut" sound="" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/BshootsB_cut.mov" width="320"/>
-	<clip duration="5.4" durinms="90" folder="jake_FINAL/clips/leantowait/" frames="60" height="240" name="leantowait" prefix="leantowait" sound="" suffix=".png" type="CachedImageClip" width="320"/>
-	<clip duration="9.54" durinms="90" folder="jake_FINAL/clips/SH3/" frames="106" height="240" name="SH3" prefix="SH3" sound="jake_FINAL/sound/SH3.aiff" suffix=".png" type="CachedImageClip" videoname="videos/jake_FINAL/SH3.mov" width="320"/>
+	<clip duration="10.17" durinms="90" folder="jake_FINAL/clips/intro/" frames="113" height="240" name="intro" prefix="intro" sound="jake_FINAL/sound/intro.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/intro.mov" width="320"/>
+	<clip duration="6.3900003" durinms="90" folder="jake_FINAL/clips/wait_01/" frames="71" height="240" name="wait_old" prefix="wait_01" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/wait_01.mov" width="320"/>
+	<clip duration="10.8" durinms="90" folder="jake_FINAL/clips/wait_2/" frames="120" height="240" name="wait" prefix="wait_2" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" width="320"/>
+	<clip duration="3.6000001" durinms="90" folder="jake_FINAL/clips/lucky2/" frames="40" height="240" name="lucky_2" prefix="lucky2" sound="jake_FINAL/sound/lucky2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/lucky2.mov" width="320"/>
+	<clip duration="6.21" durinms="90" folder="jake_FINAL/clips/lucky1/" frames="69" height="240" name="lucky_1" prefix="lucky1" sound="jake_FINAL/sound/lucky1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/lucky1.mov" width="320"/>
+	<clip duration="8.190001" durinms="90" folder="jake_FINAL/clips/lucky3/" frames="91" height="240" name="lucky_3" prefix="lucky3" sound="jake_FINAL/sound/lucky3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/lucky3.mov" width="320"/>
+	<clip duration="2.88" durinms="90" folder="jake_FINAL/clips/SH1_1/" frames="32" height="240" name="SH1_1" prefix="SH1_1" sound="jake_FINAL/sound/SH1_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH1_1.mov" width="320"/>
+	<clip duration="2.88" durinms="90" folder="jake_FINAL/clips/SH1_2/" frames="32" height="240" name="SH1_2" prefix="SH1_2" sound="jake_FINAL/sound/SH1_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH1_2.mov" width="320"/>
+	<clip duration="3.5100002" durinms="90" folder="jake_FINAL/clips/SH1_3/" frames="39" height="240" name="SH1_3" prefix="SH1_3" sound="jake_FINAL/sound/SH1_3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH1_3.mov" width="320"/>
+	<clip duration="10.17" durinms="90" folder="jake_FINAL/clips/FH1_1/" frames="113" height="240" name="FH1_1" prefix="FH1_1" sound="jake_FINAL/sound/FH1_1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH1_1.mov" width="320"/>
+	<clip duration="3.96" durinms="90" folder="jake_FINAL/clips/FH1_2/" frames="44" height="240" name="FH1_2" prefix="FH1_2" sound="jake_FINAL/sound/FH1_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH1_2.mov" width="320"/>
+	<clip duration="3.7800002" durinms="90" folder="jake_FINAL/clips/FH1_3/" frames="42" height="240" name="FH1_3" prefix="FH1_3" sound="jake_FINAL/sound/FH1_3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH1_3.mov" width="320"/>
+	<clip duration="7.2000003" durinms="90" folder="jake_FINAL/clips/FH2_2/" frames="80" height="240" name="FSFH2_2" prefix="FH2_2" sound="jake_FINAL/sound/FH2_2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH2_2.mov" width="320"/>
+	<clip duration="5.2200003" durinms="90" folder="jake_FINAL/clips/FH2_3/" frames="58" height="240" name="FSFH2_3" prefix="FH2_3" sound="jake_FINAL/sound/FH2_3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/FH2_3.mov" width="320"/>
+	<clip duration="15.570001" durinms="90" folder="jake_FINAL/clips/DH1/" frames="173" height="240" name="DH_1" prefix="DH1" sound="jake_FINAL/sound/DH1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/DH1.mov" width="320"/>
+	<clip duration="13.77" durinms="90" folder="jake_FINAL/clips/DH2/" frames="153" height="240" name="DH_2" prefix="DH2" sound="jake_FINAL/sound/DH2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/DH2.mov" width="320"/>
+	<clip duration="15.93" durinms="90" folder="jake_FINAL/clips/DH3/" frames="177" height="240" name="DH_3" prefix="DH3" sound="jake_FINAL/sound/DH3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/DH3.mov" width="320"/>
+	<clip duration="7.0200005" durinms="90" folder="jake_FINAL/clips/Bgoesfirst1/" frames="78" height="240" name="Bgoesfirst_1" prefix="Bgoesfirst1" sound="jake_FINAL/sound/Bgoesfirst1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bgoesfirst1.mov" width="320"/>
+	<clip duration="2.7" durinms="90" folder="jake_FINAL/clips/Bgoesfirst2/" frames="30" height="240" name="Bgoesfirst_2" prefix="Bgoesfirst2" sound="jake_FINAL/sound/Bgoesfirst2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bgoesfirst2.mov" width="320"/>
+	<clip duration="4.59" durinms="90" folder="jake_FINAL/clips/Bgoesfirst3/" frames="51" height="240" name="Bgoesfirst_3" prefix="Bgoesfirst3" sound="jake_FINAL/sound/Bgoesfirst3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Bgoesfirst3.mov" width="320"/>
+	<clip duration="3.8700001" durinms="90" folder="jake_FINAL/clips/Btakesgun1/" frames="43" height="240" name="Btakesgun_1" prefix="Btakesgun1" sound="jake_FINAL/sound/Btakesgun1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Btakesgun1.mov" width="320"/>
+	<clip duration="5.5800004" durinms="90" folder="jake_FINAL/clips/Btakesgun2/" frames="62" height="240" name="Btakesgun_2" prefix="Btakesgun2" sound="jake_FINAL/sound/Btakesgun2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/Btakesgun2.mov" width="320"/>
+	<clip duration="18.900002" durinms="90" folder="jake_FINAL/clips/BshootsB1/" frames="210" height="240" name="BshootsB_1" prefix="BshootsB1" sound="jake_FINAL/sound/BshootsB1.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/BshootsB1.mov" width="320"/>
+	<clip duration="16.74" durinms="90" folder="jake_FINAL/clips/BshootsB2/" frames="186" height="240" name="BshootsB_2" prefix="BshootsB2" sound="jake_FINAL/sound/BshootsB2.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/BshootsB2.mov" width="320"/>
+	<clip duration="10.35" durinms="90" folder="jake_FINAL/clips/BshootsB_cut/" frames="115" height="240" name="BshootsB_cut" prefix="BshootsB_cut" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/BshootsB_cut.mov" width="320"/>
+	<clip duration="5.4" durinms="90" folder="jake_FINAL/clips/leantowait/" frames="60" height="240" name="leantowait" prefix="leantowait" sound="" suffix=".png" type="CachedImageClip" py="-0.10" px="0" width="320"/>
+	<clip duration="9.54" durinms="90" folder="jake_FINAL/clips/SH3/" frames="106" height="240" name="SH3" prefix="SH3" sound="jake_FINAL/sound/SH3.aiff" suffix=".png" type="CachedImageClip" py="-0.10" px="0" videoname="videos/jake_FINAL/SH3.mov" width="320"/>
 	
 	
 	
 	<!--player clips clips -->
-	<clip name = "player_blank" folder = "eyes" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip name = "player_blank_patch" folder = "jake_clips/cover/" prefix = "cover" sound = "" duration = "0.1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip duration="1.700" durinms="100" folder="jake_FINAL/clips/handin/" frames="17" name="player_handin" prefix="handin" suffix=".png" type="CachedImageClip"/>
-	<clip duration="1.700" durinms="100" folder="jake_FINAL/clips/handout/" frames="17" name="player_handout" prefix="handout" suffix=".png" type="CachedImageClip"/>
+	<clip name = "player_blank" folder = "eyes" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip" py="-0.10" px="0"/>
+	<clip name = "player_blank_patch" folder = "jake_clips/cover/" prefix = "cover" sound = "" duration = "0.1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip" py="-0.10" px="0"/>
+	<clip duration="1.700" durinms="100" folder="jake_FINAL/clips/handin/" frames="17" name="player_handin" prefix="handin" suffix=".png" type="CachedImageClip" py="-0.10" px="0" />
+	<clip duration="1.700" durinms="100" folder="jake_FINAL/clips/handout/" frames="17" name="player_handout" prefix="handout" suffix=".png" type="CachedImageClip" py="-0.10" px="0"/>
 	
 	<!--eye clips -->
 	<!-- TODO to improve performance, you should use dummy clip for eyes_blank and some special function that halts all drawing for eyes_black-->
-	<clip name = "eyes_blank" folder = "eyes/" prefix = "blank" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
-	<clip name = "eyes_black" folder = "eyes/" prefix = "open_eyes" sound = "" duration = "0.000001" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
+	<clip name = "eyes_blank" folder = "eyes/" prefix = "blank" sound = "" duration = "1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
+	<clip name = "eyes_black" folder = "eyes/" prefix = "open_eyes" sound = "" duration = "1" durinms = "1" frames = "1" freeze = "yes" type = "CachedImageClip"/>
 	<clip name = "eyes_closing" folder = "eyes/" prefix = "close_eyes" sound = "" duration = ".5" durinms = "62" frames = "9" freeze = "yes" type = "CachedImageClip"/> 
-	<clip name = "eyes_blink" folder = "eyes/" prefix = "eyes_blink" sound = "" duration = ".5" durinms = "31" frames = "18" freeze = "yes" type = "CachedImageClip"/>
+	<clip name = "eyes_blink" folder = "eyes/" prefix = "eyes_blink" sound = "" duration = ".5" durinms = "20" frames = "18" freeze = "yes" type = "CachedImageClip"/>
 	<clip name = "eyes_openning" folder = "eyes/" prefix = "open_eyes" sound = "" duration = ".5" durinms = "62" frames = "9" freeze = "yes" type = "CachedImageClip"/>
 	
 	<!--bonus clips -->
-	<clip duration="1000" durinms="50" folder="fader/fadein/" frames="20" name="fadein" prefix="fadein" suffix=".png" type="CachedImageClip"/>
-	<clip duration="1000" durinms="50" folder="fader/fadeout/" frames="20" name="fadeout" prefix="fadeout" suffix=".png" type="CachedImageClip"/>
+	<clip duration="1" durinms="50" folder="fader/fadein/" frames="20" name="fadein" prefix="fadein" suffix=".png" type="CachedImageClip"/>
+	<clip duration="1" durinms="50" folder="fader/fadeout/" frames="20" name="fadeout" prefix="fadeout" suffix=".png" type="CachedImageClip"/>
 	
 	
 </clips>

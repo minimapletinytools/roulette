@@ -18,14 +18,24 @@ import shutil
 #frames = 40
 #reverse = True
 
-folder = "/home/user/Desktop/Link to stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/Bdies5/"
-prefix = "Bdies5"
+#folder = "/home/user/Desktop/Link to stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/Bdies5/"
+#prefix = "Bdies5"
+#suffix = ".png"
+#rstart = 39
+#rend = 49
+#outputstart = 49
+#frames = 200
+#reverse = True
+
+folder = "/home/user/stalls/kitchen/faucet01/roulette/src/data/jake_FINAL/clips/wait_2/"
+prefix = "wait_2"
 suffix = ".png"
-rstart = 39
-rend = 49
-outputstart = 49
-frames = 200
+rstart = 0
+rend = 21
+outputstart = 21
+frames = 100
 reverse = True
+
 
 l = range(rstart,rend)
 if reverse: l.reverse()

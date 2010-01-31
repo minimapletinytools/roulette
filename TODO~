@@ -1,26 +1,25 @@
 TODO 
 
 for submission:
-fix continue bug
-fix image shifting (incorporate into engine)
-add dramatic pause before self dying
-add wait clips
+DONE fix continue bug
+DONE fix image shifting (incorporate into engine)
+DONE add dramatic pause before self dying
+DONE add wait clips
+DONE shorten waitlean clips
+DONE shorten time till music plays
+fix new continue bug :(
+add legit continue screen
 add credit screen
 add title screen
 add joystick support
+compile and submit
 
 for 1/26/09 if not today:
-
 crop out all clips, leave extra space. DONE for jake
-
 get extra wait clips for Nate
-
 write new transition graphs for both players ugggg.
-
 DONE do hand in hand out editting for at least one character
-
 mess around with filter for Jake and Nate till you find something nice.
-
 start converting video and put in
 
 new features:

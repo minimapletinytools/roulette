@@ -74,6 +74,7 @@ class ClipManager():
 		self.graphmap = dict()
 		for e in utils.getChildren(self.graphxml,"clipnode"):
 			if e.getAttribute("id") == "1":
+				print "setting active clip", e.getAttribute("name")
 				self.active = e.getAttribute("name")
 			self.graphmap[e.getAttribute("name")] = GraphNode(e,self.clipmap[e.getAttribute("clip")])
 		
@@ -92,7 +93,12 @@ class ClipManager():
 			print "switched to",new
 			self.getActiveClip().play()
 	def draw(self):
-		drawer.draw(self.getActiveClip().grabFrame(),0,0)
+		py = px = 0
+		if self.getActiveClip().xml.hasAttribute("px"):
+			px = float(self.getActiveClip().xml.getAttribute("px"))
+		if self.getActiveClip().xml.hasAttribute("py"):
+			py = float(self.getActiveClip().xml.getAttribute("py"))
+		drawer.draw(self.getActiveClip().grabFrame(),0,0,py,px)
 	def getActiveClip(self):
 		return self.clipmap[self.graphmap[(self.active)].getAttribute("clip")]
 				

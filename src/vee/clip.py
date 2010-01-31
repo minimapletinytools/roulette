@@ -106,7 +106,16 @@ class ImageClip(Clip):
 		if framexml:
 			return resource.image(stupid.splitjoin(framexml.getAttribute("folder")+framexml.getAttribute("filename")))
 		else: return None
-	
+	def grabFrameFilename(self):
+		n = self.grabFrameNumber()
+		if int(n) <= int(self.xml.getAttribute("frames"))-1:
+			#print stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".jpg")
+			return stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png")
+		#return the last frame in the clip if we specify freeze = True
+		if self.freeze:
+			n = str(int(self.xml.getAttribute("frames"))-1)
+			return stupid.splitjoin(self.xml.getAttribute("folder")+self.xml.getAttribute("prefix")+n.zfill(5)+".png")
+		return None
 	def isFinished(self):
 		"""
 		returns true if clip has started playing and is finished playing

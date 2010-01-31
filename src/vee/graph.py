@@ -1,6 +1,7 @@
 import time
 import random #use random.choice(list) to get random elt from list
 import glob
+import copy
 #TODO this is broekn with multiple clip managers. need to give each one an id
 def getTimeOnFrame(state):
     return time.time()-state["time_enter_frame"]
@@ -24,6 +25,7 @@ def saveMemory(state,frame):
     if "MEMORY" in state:
         del state["MEMORY"]
     memory = (dict(state),frame)
+    memory[0]["visited"] = copy.deepcopy(state["visited"])
     state["MEMORY"] = memory
     print "memory saved", memory
     
@@ -89,20 +91,27 @@ def on_new_frame(state):
 def blink(state,clip):
     if clip.getTimeLeft() < 0.2:
         state["blinking"] = True
+def youlose(state,clip):
+    glob.sound.play("jake_FINAL/sound/garand_shoot_fire.wav")
+    return "continue"
+def stupid(state,clip):
+    return not random.randint(0,100)
 def graph_default(state,clip):
     return -1
 def graph_start(state,clip):
     if state["press"]:
+        state["fade"] = 1
+    if state["fade"] == 1 and time.time() - state["time_pressed"] > 1.3:
         return "intro"
     else: return "-1"
 def graph_wait(state,clip):
     blink(state,clip)
     if state["lose"]:
-        return "continue"
+        return youlose(state,clip)
     if state["player_shoot_state"] == 2:
         state["player_shoot_state"] = 0
         return random.choice(getSubset(state["visited"],["lucky",]))[1]
-    if state["turn"] == "B":
+    if state["turn"] == "B" and state["player_shoot_state"] == 0:
         return random.choice(getSubset(state["visited"],["Btakesgun",]))[1]
     if clip.isFinished():
         #this will make sure we wont transition into anything bad when player is shooting
@@ -130,7 +139,7 @@ def graph_leantowait(state,clip):
 def graph_waitlean(state,clip):
     blink(state,clip)
     if state["lose"]:
-        return "continue"
+        return youlose(state,clip)
     if state["player_shoot_state"] == 2:
         state["player_shoot_state"] = 0
         return "leantowait"
@@ -148,6 +157,8 @@ def graph_waitlean(state,clip):
     
 def graph_intro(state,clip):
     blink(state,clip)
+    if clip.getTime() > 3:
+        state["fade"] = 0
     if clip.isFinished():
         #we allow player to shoot himself now
         state["turn"] = "Y" 
@@ -159,7 +170,7 @@ def graph_intro(state,clip):
 def FH_generic(state,clip,name):
     blink(state,clip)
     if state["lose"]:
-        return "continue"
+        return youlose(state,clip)
     if clip.isFinished():
         #remove the element because we've been there already
         removeElementFromSet(state["visited"],name) 
@@ -229,7 +240,7 @@ def graph_BshootsY(state,clip):
     if clip.isFinished():
         state["shots_fired"] += 1
         if random.randint(0,5) <= state["shots_fired"]-1:
-            return "continue" 
+            return youlose(state,clip) 
         else:
             return "FY"
     else: return "-1"
@@ -295,8 +306,6 @@ def graph_BshootsB_1(state,clip):
 def graph_BshootsB_2(state,clip):
     return BshootsB_generic(state,clip,"BshootsB_2")
 def graph_BshootsB_cut(state,clip):
-    if clip.getTimeLeft() < 0.2:
-        state["blinking"] = True
     if clip.isFinished():
         state["shots_fired"] += 1
         if random.randint(0,5) <= state["shots_fired"]-1:
@@ -308,7 +317,7 @@ def graph_BshootsB_cut(state,clip):
             return random.choice(getSubset(state["visited"],["YT",]))[1]
     else: return "-1"
 def Bdies_generic(state,clip,name):
-    if clip.getTimeLeft() < 10:
+    if clip.getTimeLeft() < 15:
         if not glob.sound.isPlaying("jake_FINAL/sound/victory2.aiff"):
             glob.sound.play("jake_FINAL/sound/victory2.aiff")
     if clip.isFinished():
@@ -348,17 +357,28 @@ def graph_YT_2(state,clip):
 def graph_YT_3(state,clip):
     return YT_generic(state,clip,"YT_3")
 
-def graph_continue(state,clip):
+def graph_truecontinue(state,clip):
     if state["press"] and clip.getTime() > 1:
         state["press"] = False
         s,r =  loadMemory(state)
         if "MEMORY" in state:
-            s["MEMORY"] = state["MEMORY"]
+            s["MEMORY"] = copy.deepcopy(state["MEMORY"])
         #TODO state is not being assigned properly, need to do value by value
+        #print state
+        print "LOADED, checking state", s["visited"] == state["visited"]
         state.clear()
         state.update(s)
+        
+        #print state
         return r
     if clip.isFinished(): return "youlose"
+    else: return "-1"
+def graph_continue(state,clip):
+    #percent chance change to bandaid clip
+    #TODO play some music and shit
+    if clip.isFinished():
+        
+        return "truecontinue"
     else: return "-1"
 def graph_youlose(state,clip):
     if clip.isFinished():
@@ -369,7 +389,7 @@ def graph_youlose(state,clip):
 def SH1_generic(state,clip,name):
     blink(state,clip)
     if state["lose"]:
-        return "continue"
+        return youlose(state,clip)
     if clip.isFinished():
         removeElementFromSet(state["visited"],name) 
         return "waitlean"
@@ -384,7 +404,7 @@ def graph_SH1_3(state,clip):
 def SH2_generic(state,clip,name):
     blink(state,clip)
     if state["lose"]:
-        return "continue"
+        return youlose(state,clip)
     if clip.isFinished():
         removeElementFromSet(state["visited"],name) 
         return "waitlean"
@@ -405,7 +425,7 @@ def graph_SH3(state,clip):
     if clip.isFinished():
         state["shots_fired"] += 1
         if random.randint(0,5) <= state["shots_fired"]-1:
-            return "continue" 
+            return youlose(state,clip) 
         else:
             glob.sound.play("jake_FINAL/sound/click.aiff")
             return "FY"
@@ -437,10 +457,12 @@ def graph_player_blank(state,clip):
         
     return "-1"
 def graph_player_blank_patch(state,clip):
-    print "blank!"
+    #if state["lose"]:
+        #add additional checks here
+        #return "-1"
     if clip.getTime() > 0.5:
         state["eyes_open"] = False
-    if not state["press"]:
+    if not state["press"] and not state["player_shoot_state"] == 3:
         state["player_shoot_state"] = 0
         return "player_handout" 
     elif state["press"] and time.time() - state["time_pressed"] > 4:
@@ -451,10 +473,14 @@ def graph_player_blank_patch(state,clip):
             state["lose"] = True
             return "player_blank"
         else:
+            state["first_hesitate"]
             state["first_shot"] = False
-            state["player_shoot_state"] = 2
+            state["player_shoot_state"] = 3
             glob.sound.play("jake_FINAL/sound/click.aiff")
-            return "player_handout"
+            return "-1"
+    elif state["player_shoot_state"] == 3 and clip.getTime() > 4:
+        state["player_shoot_state"] = 2
+        return "player_handout"
     return "-1"
 def graph_player_handin(state,clip):
     if clip.isFinished(): return "player_blank_patch"
@@ -467,7 +493,8 @@ def graph_player_handout(state,clip):
     
 #eye functions
 def graph_eyes_closing(state,clip):
-    if state["lose"]:
+    if state["lose"] and clip.getTime()>5:
+        state["eyes_open"] = True
         return "eyes_blank"
     if clip.isFinished() and state["eyes_open"]:
         return "eyes_openning" 
@@ -498,6 +525,7 @@ def graph_fade_black(state,clip):
     if clip.isFinished():
         if not state["fade"]:
             return "fade_fadein"
+        else: return "-1"
     else: return "-1"
 def graph_fade_fadein(state,clip):
     if clip.isFinished():
