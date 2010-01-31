@@ -1,0 +1,31 @@
+p1. A Stupid unoriginal addictive and well designed iPhone game that one can justify making only after one makes a very sincere game that no one cares about. The game is about navigating around an artificial space with movement dictated by discrete gravitational forces. Expect this an app store near you in maybe sometime after winter break.
+
+Inspiration: The pre-assumed failure of Cave in the indie community (currently, no one cares about the thread I made on tigsource). This is my big fuck you to the art-game scene... Or at least that's all the justification I need to make a game for games sake.
+
+Oh, and the game is called "Meatball love: The Science of Gluttony" which I came up with last night when I could not sleep
+
+p2. Roulette
+
+A game of Russian Roulette where you play against a computer opponent.
+
+Graphics:
+Three options were considered for this.
+First I had considered 3d graphics using Unity. This would be rather ideal as it allows for fluidity and realism. However, it would neccesarily require outsourcing modelling and animation to a skilled modeller with access to motion capture hardware moreover the thought of managing all the transitions is not appealing.
+Second was to draw graphics, but takes away from the realism that this game tries to accomplish.
+Third, and what will be used, are digitized videos that have
+1. lower resolution
+2. posterized
+3. lowered framerate
+The reason for these 3 alterations is to find the correct balance in realism, fluidity and performance. The lower resolution guarantees performance, while posterization make lower resolution photographics aesthetically pleasing, and finally, the lowered framerate ensures the video cuts will appear natural. Similar video based games have always had the same issue with cuts which takes away from a players immersion in the game. The visual style should appear similar to say, Opera Omnia and some old dos games using digitzed graphics (by Stephen Lavelle)
+
+Design:
+Quite simply, a skin on a game of chance. The core mechanic is equivalent to rolling a dice with progressively fewer sides. There is an added twist of a few time based events but are primarily implemented to maintain realism of the skin. After players start the game, they find themselves in a shack with a bottle of vodka on the table. The players opponent (computer) pulls out a revolver, spins the barrel and puts it on the table. Dialog suggests the players persona and the opponent have previously engaged in some sort of verbal feud and after a few drinks, determined probabilistic suicide as the apt solution for resolving the dispute. The player may choose to start first or wait and let the impatient opponent take the first turn. When a shot is made, and no bullet comes out, the revolver is returned to the table by the respective player and the opposing player must take the revolver. If the controlled player takes too long to shoot or does not take the gun from the table, the computer player will become angry and kill the controlled player. This is a thematically enforced time limit to ensure the game progresses. The computer player is courageous and will not pussy out and not pull the trigger. If a bullet is shot and a bullet comes out, then the respective player looses. If this is the computer player, then the controlled player wins the game and is greeted with a gameover screen. If this is the controlled player, then the screen immediately goes black and eventually transitions into a "Continue" screen where players have an option to try again from where they left off.
+
+Interface:
+For the downloadable version, there is really no need for more than one button. Press once to take the weapon. Press and hold to pull the trigger. Takes about 3 seconds to shoot the gun so you can still back out after pressing the button. Press button again to restart the game
+
+For the arcade version. The machine comes with a realistic looking gun wired to the machine and becomes the input device. After inserting a coin, players start the game by spinning the revolver on the gun. A sensor on the usual control area of the machine determines if the gun has been returned to the table. If I can get away with it, the gun will look almost real.
+
+Point:
+1. In more modern ludology, this game satires the notion of "restarting" and the conventional underplay of death in video games.
+2. In its installation, this game is an experiment in fear as in relation to the first point.
