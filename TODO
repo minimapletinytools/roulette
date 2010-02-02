@@ -1,4 +1,25 @@
 TODO 
+for release:
+BACKUP!!!
+In general:
+remake start gameover and continue screens
+
+Jake:
+make sound only play at credits or not at all
+adjust volume on all clips
+switch to predetermined bullets
+add in continue, let continue redetermine position of bullets based on probabliity
+get new clips
+redo hand reach in crap
+try and fix transparency anti aliasing bug???
+
+Nate:
+Convert all clips
+do transition graph first
+do programming!
+put in clips
+you should be finished!
+
 
 for submission:
 DONE fix continue bug
@@ -9,10 +30,10 @@ DONE shorten waitlean clips
 DONE shorten time till music plays
 DONE2 fix new continue bug :(
 louden audio
-and joke screens
-add legit continue screen
-add credit screen
-add title screen
+DONE and joke screens
+DONe add legit continue screen
+DONE add credit screen
+DONE add title screen
 add joystick support
 subtitles...
 

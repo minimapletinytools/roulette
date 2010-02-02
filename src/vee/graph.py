@@ -94,7 +94,7 @@ def blink(state,clip):
 def youlose(state,clip):
     glob.sound.play("jake_FINAL/sound/garand_shoot_fire.wav")
     return "continue"
-def stupid(state,clip,chance = 10):
+def stupid(state,clip,chance = 1):
     return not bool(random.randint(0,chance))
 def graph_default(state,clip):
     return -1
@@ -122,7 +122,6 @@ def graph_wait(state,clip):
                 if state["FH_state"] == 0:
                     return random.choice(getSubset(state["visited"],["FH1",]))[1]
                 elif state["FH_state"] == 1:
-                    print "FS STTAEOUHO", state["first_shot"]
                     if not state["first_shot"]:
                         return random.choice(getSubset(state["visited"],["SH1",]))[1]      
                     return random.choice(getSubset(state["visited"],["FH2",]))[1]
@@ -323,11 +322,14 @@ def graph_BshootsB_cut(state,clip):
             return random.choice(getSubset(state["visited"],["YT",]))[1]
     else: return "-1"
 def Bdies_generic(state,clip,name):
-    if clip.getTimeLeft() < 15:
-        if not glob.sound.isPlaying("jake_FINAL/sound/victory2.aiff"):
-            glob.sound.play("jake_FINAL/sound/victory2.aiff")
+    if clip.getTimeLeft() < 15 and clip.getTimeLeft() > 14.5:
+        if stupid(state,clip,100):
+            if not glob.sound.isPlaying("jake_FINAL/sound/victory2.aiff"):
+                glob.sound.play("jake_FINAL/sound/victory2.aiff")
     if clip.isFinished():
-        removeElementFromSet(state["visited"],name) 
+        removeElementFromSet(state["visited"],name)
+        if not glob.sound.isPlaying("jake_FINAL/sound/victory2.aiff"):
+                glob.sound.play("jake_FINAL/sound/victory2.aiff")
         return "youwin"
     else: return "-1"
 def graph_Bdies_1(state,clip):
@@ -343,14 +345,12 @@ def graph_Bdies_5(state,clip):
 
 def graph_youwin(state,clip):
     if clip.isFinished():
-        state["RESET"] = 0
-        return "-1"
+        return "youlose"
     else: return "-1"
 
 def YT_generic(state,clip,name):
     blink(state,clip)
     if clip.isFinished():
-        #remove the element because we've been there already
         removeElementFromSet(state["visited"],name) 
         state["turn"] = "Y"
         saveMemory(state,"wait")
@@ -377,13 +377,20 @@ def graph_truecontinue(state,clip):
         
         #print state
         return r
-    if clip.isFinished(): return "youlose"
+    if clip.isFinished(): return "gameover"
+    else: return "-1"
+def graph_gameover(state,clip):
+    if clip.isFinished():
+        if not glob.sound.isPlaying("jake_FINAL/sound/victory2.aiff"):
+                glob.sound.play("jake_FINAL/sound/victory2.aiff")
+        return "youwin"
     else: return "-1"
 def graph_continue(state,clip):
     #TODO play some music and shit
     if clip.isFinished():
         if(stupid(state,clip)): return "bandaid"
-        return "truecontinue"
+        #return "truecontinue"
+        return "gameover"
     else: return "-1"
 def graph_youlose(state,clip):
     if clip.isFinished():
@@ -452,7 +459,8 @@ def graph_lucky_3(state,clip):
 #stupid clips
 def graph_bandaid(state,clip):
     if clip.isFinished():
-        return "truecontinue"
+        #return "truecontinue"
+        return "gameover"
     else: return -1
 def graph_funny_lucky(state,clip):
     blink(state,clip)
@@ -538,7 +546,7 @@ def graph_eyes_openning(state,clip):
     else: return "-1"
 def graph_eyes_blank(state,clip):
     #TODO fix bug here where you can not shoot when blinking
-    if state["blinking"]:
+    if state["blinking"] and state["player_shoot_state"] == 0:
         return "eyes_blink"
     if not state["eyes_open"]:
         return "eyes_closing"

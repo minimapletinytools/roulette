@@ -16,7 +16,16 @@ pyglet.resource.path.append("data")
 pyglet.resource.path.append("data/sound")
 pyglet.resource.reindex()
 
+
+
+import pygame
 import pygame_sound
 import imagewheel
+pygame.mixer.pre_init(44100, -16, 2, 2048)
+pygame.init()
+joy = None
+if pygame.joystick.get_count() > 0:
+    joy = pygame.joystick.Joystick(0)
+    joy.init()
 sound = pygame_sound.Sound()
 wheel = imagewheel.ImageWheel()

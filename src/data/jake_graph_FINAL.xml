@@ -89,6 +89,7 @@
 		<clipnode clip="leantowait" id="52" name="leantowait" />
 		<clipnode clip="SH3" id="53" name="SH3" />
 		<clipnode clip="truecontinue" id="54" name="truecontinue" />
+		<clipnode clip="gameover" id="55" name="gameover" />
 		
 		<!-- stupid -->
 		<clipnode clip="bandaid" id="55" name="bandaid" />

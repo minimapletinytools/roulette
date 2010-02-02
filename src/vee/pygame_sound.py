@@ -4,8 +4,6 @@ import pygame
 from pyglet.resource import *
 class Sound:
     def __init__(self):
-        pygame.mixer.pre_init(44100, -16, 2, 2048)
-        pygame.init()
         self.soundList = dict()
         self.activemusic = None
     #for more robust version, build error checking into music part of this class
